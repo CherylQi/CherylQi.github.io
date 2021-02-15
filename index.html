@@ -328,10 +328,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-02-10 18:21:46 / 修改时间：18:24:10" itemprop="dateCreated datePublished" datetime="2021-02-10T18:21:46+08:00">2021-02-10</time>
+              <time title="创建时间：2021-02-10 18:21:46" itemprop="dateCreated datePublished" datetime="2021-02-10T18:21:46+08:00">2021-02-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-15 19:02:43" itemprop="dateModified" datetime="2021-02-15T19:02:43+08:00">2021-02-15</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -339,7 +345,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>31</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -358,7 +364,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <p>window.onload多次调用只会执行最后一次。</p>
+<p>解决办法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&quot;load&quot;, function()&#123;&#125;, false)；</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -854,7 +863,7 @@
   </div>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-ribbon@1/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
@@ -875,6 +884,7 @@
 <script src="/js/bookmark.js"></script>
 
 
+  <script defer src="/lib/three/three.min.js"></script>
 
 
   
