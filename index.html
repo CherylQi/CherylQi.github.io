@@ -425,7 +425,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-20 19:03:36" itemprop="dateModified" datetime="2021-02-20T19:03:36+08:00">2021-02-20</time>
+                <time title="修改时间：2021-02-21 11:56:33" itemprop="dateModified" datetime="2021-02-21T11:56:33+08:00">2021-02-21</time>
               </span>
 
           <br>
@@ -434,14 +434,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>31</span>
+              <span>1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -453,7 +453,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>window.onload多次调用只会执行最后一次。</p>
+          <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="JavaScript引入方式"><a href="#JavaScript引入方式" class="headerlink" title="JavaScript引入方式"></a>JavaScript引入方式</h2><h3 id="外部引入"><a href="#外部引入" class="headerlink" title="外部引入"></a>外部引入</h3><p>是最常用的方式，将JS代码单独写入一个文件中，引入时<code>&lt;script src=&quot;test.js&quot;&gt;</code>，可以提高网站的性能和可维护性。</p>
+<h2 id="内部引入"><a href="#内部引入" class="headerlink" title="内部引入"></a>内部引入</h2><p>通常在head中引入，也可以在body中引入，在body中引入时放在底部，可以保证浏览器先解析HTML内容，用户的体验好，同时避免JavaScript操作DOM失效。</p>
+<h3 id="行内引入"><a href="#行内引入" class="headerlink" title="行内引入"></a>行内引入</h3><p>直接写在html语句中，这种方法会产生冗余代码，不利于维护。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p>数字：当字符和字符串拼接时，数字会隐式转换为字符串，因此如果将数字转换为字符串可以将数字与空字符串相加，也可以使用a.toString()方法。</p>
+<p>字符串：Number()将“数字型字符串”转换为数字；parseInt()可以提取字符串中前部分的整数部分，如果第一个字符非数字，则直接返回Nan，但可以是”+”或”-“;parseFloat()既可以提取整数部分也可以提取小数部分。</p>
+<p>布尔值</p>
+<p>未定义值：已经用var声明，应该有值，但未赋值；当调用函数时，未提供相应参数，即该参数undefined；对象的属性未赋值；函数无返回值时默认返回undefined。</p>
+<p>空值：未分配内存，代表一个空对象指针。</p>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><p>数组和对象</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><p>在超链接中调用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript.test()&quot;</span>&gt;</span>test<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="字符串对象"><a href="#字符串对象" class="headerlink" title="字符串对象"></a>字符串对象</h3><p><code>字符串.length()</code>可以获取字符串长度，空格也作为一个字符。</p>
+<p><code>字符串.toLowerCase();字符串.toUpperCase()</code>分别将字符串转换为小写和大写。</p>
+<p><code>字符串.charAt(i)</code>可以获取字符串中的某个字符。</p>
+<p><code>字符串.substring(start, end)</code>可以截取字符串中某一段，其中范围为<code>[start, end)</code>。</p>
+<p><code>字符串.replace(原字符串/正则表达式, 替换字符串)</code>替换字符串中的某部分为指定字符串，其中第一种方式只会替换第一个符合条件的字符串，第二种方式可以替换所有符合条件的字符串。</p>
+<p><code>字符串.split(&quot;分隔符&quot;)</code>将字符串按照条件分隔，返回值为一个字符串数组，如果<code>字符串.spilt(&quot;&quot;)</code>，则将字符串分隔为一个个字母。</p>
+<p><code>字符串.indexOf(目标字符串);字符串.lastIndexOf(目标字符串)</code>分别返回目标字符串首次出现的下标和最后出现的下标，如果不存在则返回-1。</p>
+<h3 id="数组对象"><a href="#数组对象" class="headerlink" title="数组对象"></a>数组对象</h3><h3 id="日期对象"><a href="#日期对象" class="headerlink" title="日期对象"></a>日期对象</h3><h3 id="数值对象"><a href="#数值对象" class="headerlink" title="数值对象"></a>数值对象</h3><p>window.onload多次调用只会执行最后一次。</p>
 <p>解决办法：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&quot;load&quot;, function()&#123;&#125;,false)；</span><br></pre></td></tr></table></figure>
 
@@ -848,12 +866,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">6k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">11 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
