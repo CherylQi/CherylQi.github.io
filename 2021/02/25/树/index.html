@@ -21,20 +21,20 @@
     var CONFIG = {"hostname":"cherylqi.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="栈与队列栈：先进后出；队列：先进先出 栈232. 栈实现队列思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。 20. 有效的括号思路：遍历括号字符数组，如果是左括号就将对应的右括号入栈，如果是右括号且栈">
+  <meta name="description" content="树二叉树满二叉树：除最后一层无任何子节点外，每一层上的所有结点都有两个子结点的二叉树，深度为k，有$2^k-1$个节点。 完全二叉树：叶子结点只能出现在最下层和次下层，且最下层的叶子结点集中在树的左部，若最底层为第 k 层，则该层包含 $2^h$个节点。 前、中、后序遍历思路：递归或迭代。 递归： ​    ① 确定递归函数的参数和返回值：遍历的节点和存放结果的数组 ​    ② 确定递归的终止条">
 <meta property="og:type" content="article">
-<meta property="og:title" content="栈与队列">
-<meta property="og:url" content="https://cherylqi.top/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/index.html">
+<meta property="og:title" content="树">
+<meta property="og:url" content="https://cherylqi.top/2021/02/25/%E6%A0%91/index.html">
 <meta property="og:site_name" content="Cheryl Qi">
-<meta property="og:description" content="栈与队列栈：先进后出；队列：先进先出 栈232. 栈实现队列思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。 20. 有效的括号思路：遍历括号字符数组，如果是左括号就将对应的右括号入栈，如果是右括号且栈">
+<meta property="og:description" content="树二叉树满二叉树：除最后一层无任何子节点外，每一层上的所有结点都有两个子结点的二叉树，深度为k，有$2^k-1$个节点。 完全二叉树：叶子结点只能出现在最下层和次下层，且最下层的叶子结点集中在树的左部，若最底层为第 k 层，则该层包含 $2^h$个节点。 前、中、后序遍历思路：递归或迭代。 递归： ​    ① 确定递归函数的参数和返回值：遍历的节点和存放结果的数组 ​    ② 确定递归的终止条">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-02-20T11:11:19.000Z">
-<meta property="article:modified_time" content="2021-02-25T01:02:46.741Z">
+<meta property="article:published_time" content="2021-02-25T06:12:54.000Z">
+<meta property="article:modified_time" content="2021-02-25T08:31:43.913Z">
 <meta property="article:author" content="Cheryl Qi">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://cherylqi.top/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">
+<link rel="canonical" href="https://cherylqi.top/2021/02/25/%E6%A0%91/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>栈与队列 | Cheryl Qi</title>
+  <title>树 | Cheryl Qi</title>
   
 
 
@@ -161,7 +161,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">
+    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/25/%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/profile.jpg">
@@ -174,7 +174,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          栈与队列
+          树
         </h1>
 
         <div class="post-meta">
@@ -183,16 +183,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-02-20 19:11:19" itemprop="dateCreated datePublished" datetime="2021-02-20T19:11:19+08:00">2021-02-20</time>
+              <time title="创建时间：2021-02-25 14:12:54 / 修改时间：16:31:43" itemprop="dateCreated datePublished" datetime="2021-02-25T14:12:54+08:00">2021-02-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-25 09:02:46" itemprop="dateModified" datetime="2021-02-25T09:02:46+08:00">2021-02-25</time>
-              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -200,7 +194,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>851</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -219,14 +213,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h3><p><strong>栈：先进后出；队列：先进先出</strong></p>
-<h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><h5 id="232-栈实现队列"><a href="#232-栈实现队列" class="headerlink" title="232. 栈实现队列"></a>232. 栈实现队列</h5><p>思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以<strong>复用</strong>移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。</p>
-<h5 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a>20. 有效的括号</h5><p>思路：遍历括号字符数组，如果是左括号就将对应的右括号入栈，如果是右括号且栈非空，就弹出栈顶元素，并判断栈顶元素是否和该右括号相同，如果是则继续判断，如果不是则返回false。最后如果栈为空则返回true，否则返回false。</p>
-<h5 id="1047-删除字符串中的所有重复项"><a href="#1047-删除字符串中的所有重复项" class="headerlink" title="1047. 删除字符串中的所有重复项"></a>1047. 删除字符串中的所有重复项</h5><p>思路：遍历字符串，将字母依次入栈，当栈是空的<strong>或者</strong>该字母与栈顶元素<strong>不同</strong>时，将字母入栈，否则（栈非空且字母与栈顶元素相同）栈顶元素出栈。<strong>最后反转结果字符串</strong>。</p>
-<h5 id="150-逆波兰表达式求值"><a href="#150-逆波兰表达式求值" class="headerlink" title="150. 逆波兰表达式求值"></a>150. 逆波兰表达式求值</h5><p>思路：将数字入栈，如果是运算符，则弹出栈顶的两个数字进行运算并将结果入栈。</p>
-<h4 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h4><h5 id="225-队列实现栈"><a href="#225-队列实现栈" class="headerlink" title="225. 队列实现栈"></a>225. 队列实现栈</h5><p>思路：队列A实现放入元素操作；移除元素时，<strong>队列B作为备用队列</strong>，将队列A中的所有元素（<strong>除了最后一个</strong>）弹出至队列B中，队列A中最后一个元素弹出后，交换队列A与队列B；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入队列A中（<strong>因为此时队列A与队列B已经完成交换</strong>）；只需要判断队列A是否为空就可以判断栈是否为空。</p>
-<h5 id="239-滑动窗口最大值"><a href="#239-滑动窗口最大值" class="headerlink" title="239. 滑动窗口最大值"></a>239. 滑动窗口最大值</h5><p>思路：采用双端队列实现单调队列（<strong>保证队列为单调递减</strong>）。当元素入队列时，判断该元素与队列内元素的大小关系，如果前面的数小则从<strong>队尾</strong>弹出，直至遇到大于该元素的。此时如果队首元素在窗口内，则加入结果数组中，否则从<strong>队首</strong>弹出。<strong>队列内元素为数组的<u>下标</u>值</strong>。</p>
-<h5 id="347-前-K-个高频元素"><a href="#347-前-K-个高频元素" class="headerlink" title="347. 前 K 个高频元素"></a>347. 前 K 个高频元素</h5><p>思路：先采用<code>hashmap</code>记录元素出现的次数。采用优先级队列<code>PriorityQueue</code>实现小顶堆，堆中添加的为<code>hashmap</code>中的<code>key</code>。遍历数组，当队列长度小于k时，将元素加入队列，大于k时，如果队首元素小于新的元素，则弹出队首元素并将新元素加入队列。</p>
+        <h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><h4 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h4><p><strong>满二叉树：</strong>除最后一层无任何子节点外，每一层上的所有结点都有两个子结点的二叉树，深度为k，有$2^k-1$个节点。</p>
+<p><strong>完全二叉树：</strong>叶子结点只能出现在最下层和次下层，且最下层的叶子结点集中在树的左部，若最底层为第 k 层，则该层包含 $2^h$个节点。</p>
+<h5 id="前、中、后序遍历"><a href="#前、中、后序遍历" class="headerlink" title="前、中、后序遍历"></a>前、中、后序遍历</h5><p>思路：递归或迭代。</p>
+<p><strong>递归</strong>：</p>
+<p>​    ① 确定递归函数的参数和返回值：遍历的节点和存放结果的数组</p>
+<p>​    ② 确定递归的终止条件：节点为空</p>
+<p>​    ③ 确定单层递归的逻辑：将该节点放入结果数组中，然后按照<strong>顺序</strong>遍历节点。</p>
+<p><strong>迭代</strong>：先将非空的根节点入栈，遍历这个栈直至栈空，将根节点弹出，并按顺序将<strong>非空</strong>节点重新入栈，并将根节点后跟一个 <code>null</code>节点作为<strong>标记</strong>；如果弹出的元素为空，则将下一个元素出栈并加入结果数组中。以中序遍历为例：按照右中左顺序入栈，当左子树为栈顶时，不会立即出栈，而是当左子树作为父节点时无子树时才会出栈；遍历到根节点时，因为已经访问过（<strong>标记</strong>），所以直接出栈；右子树则重复左子树的过程。</p>
+<h5 id="102-层次遍历"><a href="#102-层次遍历" class="headerlink" title="102. 层次遍历"></a>102. 层次遍历</h5><p>思路：使用队列或栈结构，将非空节点入队列，遍历队列节点，首先记录队列长度，按照该<strong>固定长度</strong>将队列的节点依次弹出，并将每个节点<strong>非空</strong>的左右子树依次加入队列。</p>
+<h5 id="226-翻转二叉树"><a href="#226-翻转二叉树" class="headerlink" title="226. 翻转二叉树"></a>226. 翻转二叉树</h5><p>思路：递归或迭代。</p>
+<p><strong>递归</strong>：</p>
+<p>​    ① 确定递归函数的参数和返回值：树的根节点</p>
+<p>​    ② 确定递归的终止条件：节点为空，返回当前根节点</p>
+<p>​    ③ 确定单层递归的逻辑：交换左右子树的位置，然后按照前序或后序遍历节点。（中序遍历会把某些子树翻转两次）</p>
+<p><strong>迭代</strong>：按前序或后序遍历树时，遇到<strong>标记</strong>节点则翻转子树。</p>
+<h5 id="101-对称二叉树"><a href="#101-对称二叉树" class="headerlink" title="101. 对称二叉树"></a>101. 对称二叉树</h5><p>思路：递归或迭代。</p>
+<p><strong>递归</strong>：</p>
+<p>​    ① 确定递归函数的参数和返回值：左子树，右子树</p>
+<p>​    ② 确定递归的终止条件：判断这一层是否对称，返回布尔值</p>
+<p>​    ③ 确定单层递归的逻辑：判断外侧子树和内侧子树是否相同。</p>
+<p><strong>迭代</strong>：使用队列或栈结构，先将左右子树入队列，然后遍历队列，弹出前两个节点，判断是否相同，如果是空节点则继续循环，如果不相同则直接返回false，否则将外侧节点和内侧节点依次入队列。</p>
+<h5 id="104-二叉树的最大深度"><a href="#104-二叉树的最大深度" class="headerlink" title="104.二叉树的最大深度"></a>104.二叉树的最大深度</h5><p>思路：递归或迭代</p>
+<p><strong>递归</strong>：</p>
+<p>​    ① 确定递归函数的参数和返回值：树的根节点</p>
+<p>​    ② 确定递归的终止条件：节点为空时，返回深度为0。</p>
+<p>​    ③ 确定单层递归的逻辑：分别得到左子树和右子树的深度，取最大值后+1。</p>
+<p><strong>迭代</strong>：采用层次遍历，每遍历一层，深度就+1。</p>
+<h5 id="111-二叉树的最小深度"><a href="#111-二叉树的最小深度" class="headerlink" title="111.二叉树的最小深度"></a>111.二叉树的最小深度</h5><p>思路：递归或迭代，与最大深度不同的是，只有<strong>叶子</strong>节点所在的层数才可以算作最小深度。</p>
+<p><strong>递归</strong>：</p>
+<p>​    ① 确定递归函数的参数和返回值：树的根节点</p>
+<p>​    ② 确定递归的终止条件：节点为<strong>叶子</strong>节点时，返回深度为0；若有左子树则递归左子树，若有右子树则递归右子树。</p>
+<p>​    ③ 确定单层递归的逻辑：分别得到左子树和右子树的深度，取最小值后+1。</p>
+<p><strong>迭代</strong>：采用层次遍历，先将深度值自增，直至遍历到<strong>叶子</strong>节点，跳出循环，遍历终止。</p>
 
     </div>
 
@@ -245,13 +264,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/02/10/%E6%95%B0%E7%BB%84/" rel="prev" title="数组">
-      <i class="fa fa-chevron-left"></i> 数组
+    <a href="/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" rel="prev" title="栈与队列">
+      <i class="fa fa-chevron-left"></i> 栈与队列
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/02/25/%E6%A0%91/" rel="next" title="树">
-      树 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -310,7 +326,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">栈与队列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">1.1.</span> <span class="nav-text">栈</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#232-%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97"><span class="nav-number">1.1.1.</span> <span class="nav-text">232. 栈实现队列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7"><span class="nav-number">1.1.2.</span> <span class="nav-text">20. 有效的括号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1047-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E9%87%8D%E5%A4%8D%E9%A1%B9"><span class="nav-number">1.1.3.</span> <span class="nav-text">1047. 删除字符串中的所有重复项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#150-%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC"><span class="nav-number">1.1.4.</span> <span class="nav-text">150. 逆波兰表达式求值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-number">1.2.</span> <span class="nav-text">队列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#225-%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88"><span class="nav-number">1.2.1.</span> <span class="nav-text">225. 队列实现栈</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#239-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="nav-number">1.2.2.</span> <span class="nav-text">239. 滑动窗口最大值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#347-%E5%89%8D-K-%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0"><span class="nav-number">1.2.3.</span> <span class="nav-text">347. 前 K 个高频元素</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">1.1.</span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%89%8D%E3%80%81%E4%B8%AD%E3%80%81%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="nav-number">1.1.1.</span> <span class="nav-text">前、中、后序遍历</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#102-%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86"><span class="nav-number">1.1.2.</span> <span class="nav-text">102. 层次遍历</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#226-%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">1.1.3.</span> <span class="nav-text">226. 翻转二叉树</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#101-%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">1.1.4.</span> <span class="nav-text">101. 对称二叉树</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#104-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E6%B7%B1%E5%BA%A6"><span class="nav-number">1.1.5.</span> <span class="nav-text">104.二叉树的最大深度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#111-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%B0%8F%E6%B7%B1%E5%BA%A6"><span class="nav-number">1.1.6.</span> <span class="nav-text">111.二叉树的最小深度</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
