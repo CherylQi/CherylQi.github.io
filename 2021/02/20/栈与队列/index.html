@@ -21,15 +21,15 @@
     var CONFIG = {"hostname":"cherylqi.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="栈与队列栈：先进后出；队列：先进先出 232. 栈实现队列思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。 225. 队列实现栈思路：队列A实现放入元素操作；移除元素时，队列B作为备用队列，将队列A中的">
+  <meta name="description" content="栈与队列栈：先进后出；队列：先进先出 栈232. 栈实现队列思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。 20. 有效的括号思路：遍历括号字符数组，如果是左括号就将对应的右括号入栈，如果是右括号且栈">
 <meta property="og:type" content="article">
 <meta property="og:title" content="栈与队列">
 <meta property="og:url" content="https://cherylqi.top/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/index.html">
 <meta property="og:site_name" content="Cheryl Qi">
-<meta property="og:description" content="栈与队列栈：先进后出；队列：先进先出 232. 栈实现队列思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。 225. 队列实现栈思路：队列A实现放入元素操作；移除元素时，队列B作为备用队列，将队列A中的">
+<meta property="og:description" content="栈与队列栈：先进后出；队列：先进先出 栈232. 栈实现队列思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。 20. 有效的括号思路：遍历括号字符数组，如果是左括号就将对应的右括号入栈，如果是右括号且栈">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-20T11:11:19.000Z">
-<meta property="article:modified_time" content="2021-02-20T11:14:02.103Z">
+<meta property="article:modified_time" content="2021-02-25T01:02:46.741Z">
 <meta property="article:author" content="Cheryl Qi">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -102,7 +102,7 @@
       <h1 class="site-title">Cheryl Qi</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Cheryl's Blog</p>
+      <p class="site-subtitle" itemprop="description">自强不息，知行合一。</p>
   </div>
 
   <div class="site-nav-right">
@@ -166,7 +166,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/profile.jpg">
       <meta itemprop="name" content="Cheryl Qi">
-      <meta itemprop="description" content="自强不息，知行合一。">
+      <meta itemprop="description" content="Cheryl's Blog">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -183,10 +183,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-02-20 19:11:19 / 修改时间：19:14:02" itemprop="dateCreated datePublished" datetime="2021-02-20T19:11:19+08:00">2021-02-20</time>
+              <time title="创建时间：2021-02-20 19:11:19" itemprop="dateCreated datePublished" datetime="2021-02-20T19:11:19+08:00">2021-02-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-25 09:02:46" itemprop="dateModified" datetime="2021-02-25T09:02:46+08:00">2021-02-25</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -194,7 +200,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>829</span>
+              <span>851</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -214,13 +220,13 @@
 
       
         <h3 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h3><p><strong>栈：先进后出；队列：先进先出</strong></p>
-<h5 id="232-栈实现队列"><a href="#232-栈实现队列" class="headerlink" title="232. 栈实现队列"></a>232. 栈实现队列</h5><p>思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以<strong>复用</strong>移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。</p>
-<h5 id="225-队列实现栈"><a href="#225-队列实现栈" class="headerlink" title="225. 队列实现栈"></a>225. 队列实现栈</h5><p>思路：队列A实现放入元素操作；移除元素时，<strong>队列B作为备用队列</strong>，将队列A中的所有元素（<strong>除了最后一个</strong>）弹出至队列B中，队列A中最后一个元素弹出后，交换队列A与队列B；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入队列A中（<strong>因为此时队列A与队列B已经完成交换</strong>）；只需要判断队列A是否为空就可以判断栈是否为空。</p>
+<h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><h5 id="232-栈实现队列"><a href="#232-栈实现队列" class="headerlink" title="232. 栈实现队列"></a>232. 栈实现队列</h5><p>思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以<strong>复用</strong>移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。</p>
 <h5 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a>20. 有效的括号</h5><p>思路：遍历括号字符数组，如果是左括号就将对应的右括号入栈，如果是右括号且栈非空，就弹出栈顶元素，并判断栈顶元素是否和该右括号相同，如果是则继续判断，如果不是则返回false。最后如果栈为空则返回true，否则返回false。</p>
 <h5 id="1047-删除字符串中的所有重复项"><a href="#1047-删除字符串中的所有重复项" class="headerlink" title="1047. 删除字符串中的所有重复项"></a>1047. 删除字符串中的所有重复项</h5><p>思路：遍历字符串，将字母依次入栈，当栈是空的<strong>或者</strong>该字母与栈顶元素<strong>不同</strong>时，将字母入栈，否则（栈非空且字母与栈顶元素相同）栈顶元素出栈。<strong>最后反转结果字符串</strong>。</p>
 <h5 id="150-逆波兰表达式求值"><a href="#150-逆波兰表达式求值" class="headerlink" title="150. 逆波兰表达式求值"></a>150. 逆波兰表达式求值</h5><p>思路：将数字入栈，如果是运算符，则弹出栈顶的两个数字进行运算并将结果入栈。</p>
+<h4 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h4><h5 id="225-队列实现栈"><a href="#225-队列实现栈" class="headerlink" title="225. 队列实现栈"></a>225. 队列实现栈</h5><p>思路：队列A实现放入元素操作；移除元素时，<strong>队列B作为备用队列</strong>，将队列A中的所有元素（<strong>除了最后一个</strong>）弹出至队列B中，队列A中最后一个元素弹出后，交换队列A与队列B；首部元素可以复用移除元素的方法，取到首部元素后，再将该元素放入队列A中（<strong>因为此时队列A与队列B已经完成交换</strong>）；只需要判断队列A是否为空就可以判断栈是否为空。</p>
 <h5 id="239-滑动窗口最大值"><a href="#239-滑动窗口最大值" class="headerlink" title="239. 滑动窗口最大值"></a>239. 滑动窗口最大值</h5><p>思路：采用双端队列实现单调队列（<strong>保证队列为单调递减</strong>）。当元素入队列时，判断该元素与队列内元素的大小关系，如果前面的数小则从<strong>队尾</strong>弹出，直至遇到大于该元素的。此时如果队首元素在窗口内，则加入结果数组中，否则从<strong>队首</strong>弹出。<strong>队列内元素为数组的<u>下标</u>值</strong>。</p>
-<h5 id="347-前-K-个高频元素"><a href="#347-前-K-个高频元素" class="headerlink" title="347. 前 K 个高频元素"></a>347. 前 K 个高频元素</h5><p>思路：先采用<code>hashmap</code>记录元素出现的次数。采用优先级队列<code>PriorityQueue</code>实现小顶堆。遍历数组，当队列长度小于k时，将元素加入队列，大于k时，如果队首元素小于新的元素，则弹出队首元素并将新元素加入队列。</p>
+<h5 id="347-前-K-个高频元素"><a href="#347-前-K-个高频元素" class="headerlink" title="347. 前 K 个高频元素"></a>347. 前 K 个高频元素</h5><p>思路：先采用<code>hashmap</code>记录元素出现的次数。采用优先级队列<code>PriorityQueue</code>实现小顶堆，堆中添加的为<code>hashmap</code>中的<code>key</code>。遍历数组，当队列长度小于k时，将元素加入队列，大于k时，如果队首元素小于新的元素，则弹出队首元素并将新元素加入队列。</p>
 
     </div>
 
@@ -301,7 +307,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">栈与队列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#232-%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97"><span class="nav-number">1.0.1.</span> <span class="nav-text">232. 栈实现队列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#225-%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88"><span class="nav-number">1.0.2.</span> <span class="nav-text">225. 队列实现栈</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7"><span class="nav-number">1.0.3.</span> <span class="nav-text">20. 有效的括号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1047-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E9%87%8D%E5%A4%8D%E9%A1%B9"><span class="nav-number">1.0.4.</span> <span class="nav-text">1047. 删除字符串中的所有重复项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#150-%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC"><span class="nav-number">1.0.5.</span> <span class="nav-text">150. 逆波兰表达式求值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#239-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="nav-number">1.0.6.</span> <span class="nav-text">239. 滑动窗口最大值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#347-%E5%89%8D-K-%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0"><span class="nav-number">1.0.7.</span> <span class="nav-text">347. 前 K 个高频元素</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97"><span class="nav-number">1.</span> <span class="nav-text">栈与队列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">1.1.</span> <span class="nav-text">栈</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#232-%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97"><span class="nav-number">1.1.1.</span> <span class="nav-text">232. 栈实现队列</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7"><span class="nav-number">1.1.2.</span> <span class="nav-text">20. 有效的括号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1047-%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E9%87%8D%E5%A4%8D%E9%A1%B9"><span class="nav-number">1.1.3.</span> <span class="nav-text">1047. 删除字符串中的所有重复项</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#150-%E9%80%86%E6%B3%A2%E5%85%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BC"><span class="nav-number">1.1.4.</span> <span class="nav-text">150. 逆波兰表达式求值</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%9F%E5%88%97"><span class="nav-number">1.2.</span> <span class="nav-text">队列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#225-%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0%E6%A0%88"><span class="nav-number">1.2.1.</span> <span class="nav-text">225. 队列实现栈</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#239-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC"><span class="nav-number">1.2.2.</span> <span class="nav-text">239. 滑动窗口最大值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#347-%E5%89%8D-K-%E4%B8%AA%E9%AB%98%E9%A2%91%E5%85%83%E7%B4%A0"><span class="nav-number">1.2.3.</span> <span class="nav-text">347. 前 K 个高频元素</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -310,14 +316,14 @@
     <img class="site-author-image" itemprop="image" alt="Cheryl Qi"
       src="/images/profile.jpg">
   <p class="site-author-name" itemprop="name">Cheryl Qi</p>
-  <div class="site-description" itemprop="description">自强不息，知行合一。</div>
+  <div class="site-description" itemprop="description">Cheryl's Blog</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -360,12 +366,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">11k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">14 分钟</span>
+    <span title="站点阅读时长">20 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
