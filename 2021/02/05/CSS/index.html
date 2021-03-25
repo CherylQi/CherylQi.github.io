@@ -21,16 +21,19 @@
     var CONFIG = {"hostname":"cherylqi.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="CSSCSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观。 CSS选择器元素选择器12345元素&amp;#123;	属性1: 取值1;	......	属性n: 取值n;&amp;#125;">
+  <meta name="description" content="CSSCSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观。 CSS引入方式（1）外部样式表。 （2）内部样式表。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS">
 <meta property="og:url" content="https://cherylqi.top/2021/02/05/CSS/index.html">
 <meta property="og:site_name" content="Cheryl Qi">
-<meta property="og:description" content="CSSCSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观。 CSS选择器元素选择器12345元素&amp;#123;	属性1: 取值1;	......	属性n: 取值n;&amp;#125;">
+<meta property="og:description" content="CSSCSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观。 CSS引入方式（1）外部样式表。 （2）内部样式表。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://tva3.sinaimg.cn/large/005SZbikly1gnl3egg2gdj30b006k76u.jpg">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/large/005SZbikly1govz75o35fj30hr0art9j.jpg">
+<meta property="og:image" content="https://tva4.sinaimg.cn/large/005SZbikly1govz7nfywtj30ha06sq3j.jpg">
+<meta property="og:image" content="https://tvax3.sinaimg.cn/large/005SZbikly1govz7x62oej30ha08uwfk.jpg">
 <meta property="article:published_time" content="2021-02-05T10:21:34.000Z">
-<meta property="article:modified_time" content="2021-03-10T00:19:00.219Z">
+<meta property="article:modified_time" content="2021-03-25T03:32:26.811Z">
 <meta property="article:author" content="Cheryl Qi">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -193,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-10 08:19:00" itemprop="dateModified" datetime="2021-03-10T08:19:00+08:00">2021-03-10</time>
+                <time title="修改时间：2021-03-25 11:32:26" itemprop="dateModified" datetime="2021-03-25T11:32:26+08:00">2021-03-25</time>
               </span>
 
           <br>
@@ -202,14 +205,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
+              <span>3.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -222,13 +225,54 @@
 
       
         <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p>CSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观。</p>
+<h2 id="CSS引入方式"><a href="#CSS引入方式" class="headerlink" title="CSS引入方式"></a>CSS引入方式</h2><p>（1）外部样式表。</p>
+<p>（2）内部样式表。</p>
+<p>（3）行内样式表。</p>
+<p>还有一种@import方式，他是先加载HTML后加载CSS，而link先加载CSS后加载HTML。如果HTML在CSS之前加载，页面用户体验非常差。外部样式表多用于公有样式，内部样式表多用于私有样式，而行内样式更多用于小修改或者优先级方面。</p>
+<h2 id="CSS单位"><a href="#CSS单位" class="headerlink" title="CSS单位"></a>CSS单位</h2><h3 id="px"><a href="#px" class="headerlink" title="px"></a>px</h3><p>根据屏幕分辨率的不同，1px的大小会发生变化。</p>
+<h3 id=""><a href="#" class="headerlink" title="%"></a>%</h3><p>（1）width、height、font-size的百分比是相对于<strong>父元素</strong>“相同属性”的值来计算的。</p>
+<p>（2）line-height的百分比是相对于父元素的font-size值来计算的。</p>
+<p>（3）vertical-align的百分比是相对当前元素的line-height值来计算的。</p>
+<h3 id="em"><a href="#em" class="headerlink" title="em"></a>em</h3><p>em是相对于“<strong>当前元素</strong>”的字体大小而言的。其中，1em等于“当前元素”字体大小。</p>
+<p>（1）首行缩进使用text-indent:2em实现</p>
+<p>（2）使用em作为统一单位</p>
+<p>（3）使用em作为字体大小单位</p>
+<h3 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h3><p>相对于<strong>根元素</strong>（即html元素）的字体大小。</p>
 <h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">元素&#123;</span><br><span class="line">	属性1: 取值1;</span><br><span class="line">	......</span><br><span class="line">	属性n: 取值n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#id&#123;</span><br><span class="line">	属性1: 取值1;</span><br><span class="line">	......</span><br><span class="line">	属性n: 取值n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>id属性具有唯一性</p>
 <h3 id="class选择器"><a href="#class选择器" class="headerlink" title="class选择器"></a>class选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.class&#123;</span><br><span class="line">    属性1: 取值1;</span><br><span class="line">    ......</span><br><span class="line">    属性n: 取值n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>class属性可以为同一页面的相同元素或不同元素设置相同的class。</p>
-<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">选择器1 选择器2&#123;</span><br><span class="line">    属性1: 取值1;</span><br><span class="line">    ......</span><br><span class="line">    属性n: 取值n;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>为了避免class命名的重复，命名时一般取父元素的class名作为前缀</p>
+<h3 id="层次选择器"><a href="#层次选择器" class="headerlink" title="层次选择器"></a>层次选择器</h3><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>M    N</td>
+<td>后代选择器，选择M元素内部后代N元素（<strong>所有</strong>N元素）</td>
+</tr>
+<tr>
+<td>M &gt; N</td>
+<td>子代选择器，选择M元素内部子代N元素（所有<strong>第1级</strong>N元素）</td>
+</tr>
+<tr>
+<td>M ~ N</td>
+<td>兄弟选择器，选择M元素<strong>后</strong>所有的同级N元素</td>
+</tr>
+<tr>
+<td>M + N</td>
+<td>相邻选择器，选择M元素<strong>相邻</strong>的下一个元素</td>
+</tr>
+</tbody></table>
+<h4 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">选择器1 选择器2&#123;</span><br><span class="line">    属性1: 取值1;</span><br><span class="line">    ......</span><br><span class="line">    属性n: 取值n;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>表示选择器1的<strong>所有</strong>（包括子、孙元素）后代中的选择器2元素，两个选择器间用空格分开。</p>
+<h4 id="子代选择器"><a href="#子代选择器" class="headerlink" title="子代选择器"></a>子代选择器</h4><p>选取的是元素内部某一个子元素（只限子元素）</p>
+<h4 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h4><p>选中元素后面（<strong>不包括前面</strong>）的某一类兄弟元素。</p>
+<h4 id="相邻选择器"><a href="#相邻选择器" class="headerlink" title="相邻选择器"></a>相邻选择器</h4><p>选中元素后面（不包括前面）的某一个“相邻”的兄弟元素。</p>
 <h3 id="群组选择器"><a href="#群组选择器" class="headerlink" title="群组选择器"></a>群组选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">选择器1，选择器2&#123;</span><br><span class="line">    属性1: 取值1;</span><br><span class="line">    ......</span><br><span class="line">    属性n: 取值n;		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>表示同时对多个选择器进行相同的操作，选择器之间用逗号分开。</p>
 <h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[type=&#x27;radio&#x27;]&#123;</span><br><span class="line">    属性1: 取值1;</span><br><span class="line">    ......</span><br><span class="line">    属性n: 取值n;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -253,7 +297,23 @@
 <p>定义鼠标经过a元素时的样式：a:hover，可以用于多种元素。</p>
 <p>定义鼠标样式：cursor[default, pointer, text, url(图片地址)]，其中自定义鼠标样式的图片后缀名为.cur</p>
 <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p><img data-src="https://tva3.sinaimg.cn/large/005SZbikly1gnl3egg2gdj30b006k76u.jpg" alt="盒子模型"></p>
-<p><strong>记</strong>： 只有块元素可以设置width和height，如果为行内元素设置width和height，可以使用display属性将行内元素转换为块元素。</p>
+<p><strong>记</strong>： 只有块元素可以设置width和height，如果为行内元素设置width和height，可以使用display属性将行内元素转换为块元素。<strong>所有的元素都可以看成一个盒子！</strong></p>
+<p><strong>内容区</strong>有三个属性：width、height和overflow。使用width和height属性可以指定盒子内容区的高度和宽度。在这里注意一点，width和height这两个属性是针对内容区而言，并不包括padding部分。当内容信息太多而超出内容区所占范围时，可以使用overflow溢出属性来指定处理方法。</p>
+<p><strong>边框</strong>，border属性，其中“border:0”需要占用内存。“border:none”不需要占用内存。</p>
+<p><strong>外边距</strong>，叠加的情况</p>
+<p>同级元素的外边距叠加</p>
+<p><img data-src="https://tvax1.sinaimg.cn/large/005SZbikly1govz75o35fj30hr0art9j.jpg" alt="同级元素的外边距叠加"></p>
+<p>父子元素的外边距叠加</p>
+<p><img data-src="https://tva4.sinaimg.cn/large/005SZbikly1govz7nfywtj30ha06sq3j.jpg" alt="父子元素的外边距叠加"></p>
+<p>空元素的外边距叠加</p>
+<p><img data-src="https://tvax3.sinaimg.cn/large/005SZbikly1govz7x62oej30ha08uwfk.jpg" alt="空元素的外边距叠加"></p>
+<p>（1）水平外边距永远不会有叠加，水平外边距指的是margin-left和margin-right。</p>
+<p>（2）垂直外边距只会在以上三种情况下会叠加，垂直外边距指的是margin-top和margin-bottom。（3）外边距叠加之后的外边距高度等于发生叠加之前的两个外边距中的最大值。</p>
+<p>（4）外边距叠加针对的是block以及inline-block元素，不包括inline元素。因为inline元素的margin-top和margin-bottom设置无效。</p>
+<p><strong>负margin</strong></p>
+<p>（1）当元素的margin-top或者margin-left为负数时，“当前元素”会被拉向指定方向。</p>
+<p>（2）当元素的margin-bottom或者margin-right为负数时，“后续元素”会被拉向指定方向。</p>
+<p>应用：图片与文字对齐、自适应两列布局、元素垂直居中（父元素“position:relative”，子元素“position:absolute, top:50%, left:50%, margin-top:-height/2, margin-left:-width/2），tab选项卡</p>
 <h2 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h2><p><strong>正常文档流</strong>：默认情况下页面元素的布局情况，一个页面从上到下分为一行一行，其中块元素独占一行，相邻行内元素在每一行中按照从左到右直到该行排满。</p>
 <p><strong>脱离文档流</strong>：元素不按照默认情况布局，可能通过设置<strong>浮动</strong>或<strong>定位</strong>是的元素脱离了文档流。</p>
 <p>设置浮动属性后，块元素的宽度就不再延伸。</p>
@@ -262,6 +322,60 @@
 <p>相对定位：<strong>position</strong>[relative]，指元素的位置相对于它的原始位置计算的。</p>
 <p>绝对定位：<strong>position</strong>[absolute]，相对于浏览器而言，定义在任意位置。</p>
 <p><strong>记</strong>：尝试用浮动布局，定位布局可能会使元素脱离原来的位置，使得布局不可控。</p>
+<h2 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h2><h3 id="继承性"><a href="#继承性" class="headerlink" title="继承性"></a>继承性</h3><p>子元素会继承父元素的字体及颜色，但padding，margin和border等不具备继承性。</p>
+<p>注：某些子元素标签样式的优先级高于继承的样式。如a标签。</p>
+<h3 id="层叠性"><a href="#层叠性" class="headerlink" title="层叠性"></a>层叠性</h3><p>对于同一个元素来说，如果我们重复定义多个相同的属性，并且这些样式具有相同的权重，CSS会以最后定义的属性的值为准。</p>
+<p>（1）引用方式冲突。</p>
+<p>​            <strong>行内样式&gt;（内部样式=外部样式）</strong></p>
+<p>（2）继承方式冲突。</p>
+<p>​            最近的祖先元素的优先级最高</p>
+<p>（3）指定样式冲突。</p>
+<p>​            当直接指定的“<strong>当前元素</strong>”样式发生冲突时，样式权值高者获胜。</p>
+<p>​            常用的有：行内样式&gt; id选择器&gt; class选择器&gt;元素选择器</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>权值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>通配符</td>
+<td>0</td>
+</tr>
+<tr>
+<td>伪元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>元素选择器</td>
+<td>1</td>
+</tr>
+<tr>
+<td>class选择器</td>
+<td>10</td>
+</tr>
+<tr>
+<td>伪类</td>
+<td>10</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>10</td>
+</tr>
+<tr>
+<td>id选择器</td>
+<td>100</td>
+</tr>
+<tr>
+<td>行内样式</td>
+<td>1000</td>
+</tr>
+</tbody></table>
+<p>（4）继承样式与指定样式冲突。</p>
+<p>​        指定样式优先。</p>
+<p>（5）! important。</p>
+<p>​        如果一个样式使用!important来声明，则这个样式会覆盖CSS中任何的其他样式声明。</p>
 
     </div>
 
@@ -345,7 +459,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.1.</span> <span class="nav-text">元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">id选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">class选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.4.</span> <span class="nav-text">后代选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%A4%E7%BB%84%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.5.</span> <span class="nav-text">群组选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.6.</span> <span class="nav-text">属性选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">字体样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">列表样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">表格样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.6.</span> <span class="nav-text">图片样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.7.</span> <span class="nav-text">背景样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB"><span class="nav-number">1.8.</span> <span class="nav-text">超链接伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.9.</span> <span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80"><span class="nav-number">1.10.</span> <span class="nav-text">浮动布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80"><span class="nav-number">1.11.</span> <span class="nav-text">定位布局</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">1.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">CSS引入方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E5%8D%95%E4%BD%8D"><span class="nav-number">1.2.</span> <span class="nav-text">CSS单位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#px"><span class="nav-number">1.2.1.</span> <span class="nav-text">px</span></a></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">1.2.2.</span> <span class="nav-text">%</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#em"><span class="nav-number">1.2.3.</span> <span class="nav-text">em</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rem"><span class="nav-number">1.2.4.</span> <span class="nav-text">rem</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text">元素选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">id选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#class%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.3.</span> <span class="nav-text">class选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.4.</span> <span class="nav-text">层次选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">后代选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%90%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">子代选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%84%E5%BC%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">兄弟选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%B8%E9%82%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.4.4.</span> <span class="nav-text">相邻选择器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BE%A4%E7%BB%84%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.5.</span> <span class="nav-text">群组选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.3.6.</span> <span class="nav-text">属性选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">字体样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">文本样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.6.</span> <span class="nav-text">列表样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.7.</span> <span class="nav-text">表格样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.8.</span> <span class="nav-text">图片样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.9.</span> <span class="nav-text">背景样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB"><span class="nav-number">1.10.</span> <span class="nav-text">超链接伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.11.</span> <span class="nav-text">盒子模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80"><span class="nav-number">1.12.</span> <span class="nav-text">浮动布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80"><span class="nav-number">1.13.</span> <span class="nav-text">定位布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E7%89%B9%E6%80%A7"><span class="nav-number">1.14.</span> <span class="nav-text">CSS特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF%E6%80%A7"><span class="nav-number">1.14.1.</span> <span class="nav-text">继承性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E5%8F%A0%E6%80%A7"><span class="nav-number">1.14.2.</span> <span class="nav-text">层叠性</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -404,12 +518,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">110k</span>
+    <span title="站点总字数">112k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:19</span>
+    <span title="站点阅读时长">3:23</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
