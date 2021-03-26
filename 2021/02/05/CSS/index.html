@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://tva4.sinaimg.cn/large/005SZbikly1govz7nfywtj30ha06sq3j.jpg">
 <meta property="og:image" content="https://tvax3.sinaimg.cn/large/005SZbikly1govz7x62oej30ha08uwfk.jpg">
 <meta property="article:published_time" content="2021-02-05T10:21:34.000Z">
-<meta property="article:modified_time" content="2021-03-25T03:32:26.811Z">
+<meta property="article:modified_time" content="2021-03-26T02:50:11.406Z">
 <meta property="article:author" content="Cheryl Qi">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-25 11:32:26" itemprop="dateModified" datetime="2021-03-25T11:32:26+08:00">2021-03-25</time>
+                <time title="修改时间：2021-03-26 10:50:11" itemprop="dateModified" datetime="2021-03-26T10:50:11+08:00">2021-03-26</time>
               </span>
 
           <br>
@@ -205,14 +205,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.6k</span>
+              <span>3.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -298,6 +298,9 @@
 <p>定义鼠标样式：cursor[default, pointer, text, url(图片地址)]，其中自定义鼠标样式的图片后缀名为.cur</p>
 <h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p><img data-src="https://tva3.sinaimg.cn/large/005SZbikly1gnl3egg2gdj30b006k76u.jpg" alt="盒子模型"></p>
 <p><strong>记</strong>： 只有块元素可以设置width和height，如果为行内元素设置width和height，可以使用display属性将行内元素转换为块元素。<strong>所有的元素都可以看成一个盒子！</strong></p>
+<p>“display:none”与“visibility:hidden”的区别：</p>
+<p>“display:none”的元素被隐藏之后，不占据原来的位置。</p>
+<p>“visibility:hidden”的元素被隐藏之后，依然占据原来的位置。</p>
 <p><strong>内容区</strong>有三个属性：width、height和overflow。使用width和height属性可以指定盒子内容区的高度和宽度。在这里注意一点，width和height这两个属性是针对内容区而言，并不包括padding部分。当内容信息太多而超出内容区所占范围时，可以使用overflow溢出属性来指定处理方法。</p>
 <p><strong>边框</strong>，border属性，其中“border:0”需要占用内存。“border:none”不需要占用内存。</p>
 <p><strong>外边距</strong>，叠加的情况</p>
@@ -314,6 +317,13 @@
 <p>（1）当元素的margin-top或者margin-left为负数时，“当前元素”会被拉向指定方向。</p>
 <p>（2）当元素的margin-bottom或者margin-right为负数时，“后续元素”会被拉向指定方向。</p>
 <p>应用：图片与文字对齐、自适应两列布局、元素垂直居中（父元素“position:relative”，子元素“position:absolute, top:50%, left:50%, margin-top:-height/2, margin-left:-width/2），tab选项卡</p>
+<p>“<strong>display:table-cell</strong>”可以实现以下三种功能。</p>
+<p>（1）图片垂直居中于元素。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">父元素&#123;</span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">    <span class="attribute">vertical-align</span>:center;</span><br><span class="line">&#125;</span><br><span class="line">子元素&#123;</span><br><span class="line">    <span class="attribute">vertical-align</span>:center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>（2）等高布局。（设置左右两个盒子分别<strong>display:table-cell</strong>，高度相等，并且高度由最大高度决定，自适应）</p>
+<p>（3）自动平均划分元素，并且在一行显示。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">父元素&#123;</span><br><span class="line">    <span class="attribute">display</span>:table;</span><br><span class="line">&#125;</span><br><span class="line">子元素&#123;</span><br><span class="line">    <span class="attribute">display</span>:table-cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注：</strong>将父元素的font-size设置为0，可以消除inline-block元素的间距。</p>
 <h2 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h2><p><strong>正常文档流</strong>：默认情况下页面元素的布局情况，一个页面从上到下分为一行一行，其中块元素独占一行，相邻行内元素在每一行中按照从左到右直到该行排满。</p>
 <p><strong>脱离文档流</strong>：元素不按照默认情况布局，可能通过设置<strong>浮动</strong>或<strong>定位</strong>是的元素脱离了文档流。</p>
 <p>设置浮动属性后，块元素的宽度就不再延伸。</p>
@@ -518,12 +528,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">112k</span>
+    <span title="站点总字数">113k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:23</span>
+    <span title="站点阅读时长">3:25</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
