@@ -21,15 +21,15 @@
     var CONFIG = {"hostname":"cherylqi.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="12 子查询子查询是一种将SPARQL查询嵌入其他查询中的方法，通常可以实现其他无法实现的结果，例如限制查询中某些子表达式的结果数量。 由于SPARQL查询评估的自下而上的性质，因此先对子查询进行逻辑评估，然后将结果投影到外部查询。 请注意，只有从子查询之外，或者在作用域内投影的变量对外部查询是可见的。 数据">
+  <meta name="description" content="12 子查询子查询是一种将SPARQL查询嵌入其他查询中的方法，通常可以实现其他无法实现的结果，例如限制查询中某些子表达式的结果数量。 由于SPARQL查询评估的自下而上的性质，因此先对子查询进行逻辑评估，然后将结果投影到外部查询。 请注意，只有从子查询之外，或者在作用域内投影的变量对外部查询是可见的。 数据 123456@prefix : &lt;http:&#x2F;&#x2F;people.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SPARQL 1.1 笔记(二)">
 <meta property="og:url" content="https://cherylqi.top/2021/03/21/SPARQL%201.1%20%E7%AC%94%E8%AE%B0(%E4%BA%8C)/index.html">
 <meta property="og:site_name" content="Cheryl Qi">
-<meta property="og:description" content="12 子查询子查询是一种将SPARQL查询嵌入其他查询中的方法，通常可以实现其他无法实现的结果，例如限制查询中某些子表达式的结果数量。 由于SPARQL查询评估的自下而上的性质，因此先对子查询进行逻辑评估，然后将结果投影到外部查询。 请注意，只有从子查询之外，或者在作用域内投影的变量对外部查询是可见的。 数据">
+<meta property="og:description" content="12 子查询子查询是一种将SPARQL查询嵌入其他查询中的方法，通常可以实现其他无法实现的结果，例如限制查询中某些子表达式的结果数量。 由于SPARQL查询评估的自下而上的性质，因此先对子查询进行逻辑评估，然后将结果投影到外部查询。 请注意，只有从子查询之外，或者在作用域内投影的变量对外部查询是可见的。 数据 123456@prefix : &lt;http:&#x2F;&#x2F;people.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-21T03:11:49.000Z">
-<meta property="article:modified_time" content="2021-03-22T02:42:20.457Z">
+<meta property="article:modified_time" content="2021-03-31T12:18:38.574Z">
 <meta property="article:author" content="Cheryl Qi">
 <meta property="article:tag" content="语义Web">
 <meta name="twitter:card" content="summary">
@@ -48,6 +48,7 @@
 </script>
 
   <title>SPARQL 1.1 笔记(二) | Cheryl Qi</title>
+
   
 
 
@@ -191,7 +192,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-22 10:42:20" itemprop="dateModified" datetime="2021-03-22T10:42:20+08:00">2021-03-22</time>
+                <time title="修改时间：2021-03-31 20:18:38" itemprop="dateModified" datetime="2021-03-31T20:18:38+08:00">2021-03-31</time>
               </span>
 
           
@@ -232,6 +233,8 @@
 <p><strong>数据</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@prefix : &lt;http:&#x2F;&#x2F;people.example&#x2F;&gt; .</span><br><span class="line"></span><br><span class="line">:alice :name &quot;Alice&quot;, &quot;Alice Foo&quot;, &quot;A. Foo&quot; .</span><br><span class="line">:alice :knows :bob, :carol .</span><br><span class="line">:bob :name &quot;Bob&quot;, &quot;Bob Bar&quot;, &quot;B. Bar&quot; .</span><br><span class="line">:carol :name &quot;Carol&quot;, &quot;Carol Baz&quot;, &quot;C. Baz&quot; .</span><br></pre></td></tr></table></figure>
 <p>为所有认识爱丽丝并有名字的人返回一个名字（排序最低的名字）。</p>
+<a id="more"></a>
+
 <p><strong>查询</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PREFIX : &lt;http:&#x2F;&#x2F;people.example&#x2F;&gt;</span><br><span class="line">PREFIX : &lt;http:&#x2F;&#x2F;people.example&#x2F;&gt;</span><br><span class="line">SELECT ?y ?minName</span><br><span class="line">WHERE &#123;</span><br><span class="line">  :alice :knows ?y .</span><br><span class="line">  &#123;</span><br><span class="line">    SELECT ?y (MIN(?name) AS ?minName)</span><br><span class="line">    WHERE &#123;</span><br><span class="line">      ?y :name ?name .</span><br><span class="line">    &#125; GROUP BY ?y</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>结果</strong></p>
@@ -392,7 +395,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>&lt;mailto:<a href="mailto:&#x62;&#111;&#98;&#x40;&#x77;&#x6f;&#x72;&#107;&#x2e;&#101;&#120;&#97;&#109;&#x70;&#x6c;&#x65;">&#x62;&#111;&#98;&#x40;&#x77;&#x6f;&#x72;&#107;&#x2e;&#101;&#120;&#97;&#109;&#x70;&#x6c;&#x65;</a>&gt;</td>
+<td>&lt;mailto:<a href="mailto:&#x62;&#x6f;&#98;&#64;&#x77;&#111;&#x72;&#107;&#x2e;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;">&#x62;&#x6f;&#98;&#64;&#x77;&#111;&#x72;&#107;&#x2e;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;</a>&gt;</td>
 <td>“Robert”</td>
 <td>&lt;<a target="_blank" rel="noopener" href="http://example.org/foaf/bobFoaf&gt;">http://example.org/foaf/bobFoaf&gt;</a></td>
 </tr>
@@ -417,12 +420,12 @@
 </thead>
 <tbody><tr>
 <td>“Bob”</td>
-<td>&lt;mailto:<a href="mailto:&#98;&#x6f;&#x62;&#64;&#111;&#108;&#x64;&#99;&#x6f;&#x72;&#x70;&#46;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#111;&#x72;&#x67;">&#98;&#x6f;&#x62;&#64;&#111;&#108;&#x64;&#99;&#x6f;&#x72;&#x70;&#46;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#111;&#x72;&#x67;</a>&gt;</td>
+<td>&lt;mailto:<a href="mailto:&#x62;&#111;&#98;&#64;&#x6f;&#x6c;&#100;&#x63;&#111;&#114;&#112;&#x2e;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#111;&#114;&#x67;">&#x62;&#111;&#98;&#64;&#x6f;&#x6c;&#100;&#x63;&#111;&#114;&#112;&#x2e;&#101;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#111;&#114;&#x67;</a>&gt;</td>
 <td>“2004-12-06”^^xsd:date</td>
 </tr>
 <tr>
 <td>“Bob”</td>
-<td>&lt;mailto:<a href="mailto:&#98;&#111;&#98;&#64;&#x6e;&#101;&#119;&#99;&#111;&#x72;&#x70;&#46;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#111;&#114;&#x67;">&#98;&#111;&#98;&#64;&#x6e;&#101;&#119;&#99;&#111;&#x72;&#x70;&#46;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#111;&#114;&#x67;</a>&gt;</td>
+<td>&lt;mailto:<a href="mailto:&#x62;&#x6f;&#x62;&#64;&#x6e;&#x65;&#x77;&#99;&#111;&#114;&#112;&#x2e;&#x65;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#111;&#114;&#103;">&#x62;&#x6f;&#x62;&#64;&#x6e;&#x65;&#x77;&#99;&#111;&#114;&#112;&#x2e;&#x65;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#111;&#114;&#103;</a>&gt;</td>
 <td>“2005-01-10”^^xsd:date</td>
 </tr>
 </tbody></table>
@@ -839,6 +842,18 @@
 
       </div>
 
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+          <h3 class="widget-title"></h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+            <canvas width="250" height="250" id="resCanvas" style="width:100%">
+              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%B6%E5%BA%8F%E6%95%B0%E6%8D%AE/" rel="tag">时序数据</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE/" rel="tag">空间数据</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E4%B9%89Web/" rel="tag">语义Web</a><span class="tag-list-count">8</span></li></ul>
+            </canvas>
+          </div>
+        </div>
+      
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>

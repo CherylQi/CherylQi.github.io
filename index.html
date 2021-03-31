@@ -45,6 +45,7 @@
 </script>
 
   <title>Cheryl Qi</title>
+
   
 
 
@@ -182,7 +183,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-31 19:25:05 / 修改时间：19:25:39" itemprop="dateCreated datePublished" datetime="2021-03-31T19:25:05+08:00">2021-03-31</time>
+              <time title="创建时间：2021-03-31 19:25:05 / 修改时间：20:12:11" itemprop="dateCreated datePublished" datetime="2021-03-31T19:25:05+08:00">2021-03-31</time>
             </span>
 
           <br>
@@ -213,6 +214,10 @@
           <h1 id="Geography"><a href="#Geography" class="headerlink" title="Geography"></a>Geography</h1><h2 id="1-术语及定义"><a href="#1-术语及定义" class="headerlink" title="1 术语及定义"></a>1 术语及定义</h2><p><strong>边界(boundary)</strong>: 表示实体的限制。是点的集合或是表示这些点的对象的集合。</p>
 <p><strong>坐标(coordinate)</strong>: 在n维空间中，是一个n个数的序列，用于指定一个<strong>点</strong>的位置。<u>注</u>：在坐标参考系中，数字应该由单位限制。</p>
 <p><strong>坐标系(coordinate system)</strong>: 是一组数学规则，用于指定如何为每个<strong>点</strong>分配<strong>坐标</strong>。</p>
+<p><strong>坐标维度(coordinate dimension)</strong>: 描述<strong>坐标系</strong>中位置所需的测量值或轴。</p>
+<p><strong>坐标参考系(coordinate reference system)</strong>: 通过一个基准点与真实世界联系起来的<strong>坐标系</strong>。</p>
+<p><strong>直接位置(direct position)</strong>: 在<strong>坐标参考系</strong>中，由一组坐标描述的位置。</p>
+<p><strong>缓冲区(buffer)</strong>: 是一个<strong>几何对象</strong>，包含了所有与给定几何对象的距离小于或等于指定距离的<strong>直接位置</strong>。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/31/%E5%87%A0%E4%BD%95%E5%9B%BE%E5%BD%A2/#more" rel="contents">
@@ -264,7 +269,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-03-31 19:22:31 / 修改时间：19:23:05" itemprop="dateCreated datePublished" datetime="2021-03-31T19:22:31+08:00">2021-03-31</time>
+              <time title="创建时间：2021-03-31 19:22:31 / 修改时间：20:19:27" itemprop="dateCreated datePublished" datetime="2021-03-31T19:22:31+08:00">2021-03-31</time>
             </span>
 
           <br>
@@ -295,6 +300,7 @@
           <h1 id="Temporal"><a href="#Temporal" class="headerlink" title="Temporal"></a>Temporal</h1><h2 id="时间标签"><a href="#时间标签" class="headerlink" title="时间标签"></a>时间标签</h2><p>时间点：将时间离散化，事务或事件的时间属性用时间点表示。</p>
 <p>时间区间：通过描述时间段的起始点和终止点来描述时间区间。</p>
 <p>时间跨度：指持续的一段时间，表示时间的长度。没有起点和终点。</p>
+<p>时间集合/域：时间区间的有穷并集。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/31/%E6%97%B6%E5%BA%8F%E6%95%B0%E6%8D%AE/#more" rel="contents">
@@ -352,7 +358,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-23 14:50:00" itemprop="dateModified" datetime="2021-03-23T14:50:00+08:00">2021-03-23</time>
+                <time title="修改时间：2021-03-31 20:19:08" itemprop="dateModified" datetime="2021-03-31T20:19:08+08:00">2021-03-31</time>
               </span>
 
           <br>
@@ -440,7 +446,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-23 14:48:41" itemprop="dateModified" datetime="2021-03-23T14:48:41+08:00">2021-03-23</time>
+                <time title="修改时间：2021-03-31 20:19:01" itemprop="dateModified" datetime="2021-03-31T20:19:01+08:00">2021-03-31</time>
               </span>
 
           <br>
@@ -470,7 +476,9 @@
       
           <h2 id="18-SPARQL-的定义"><a href="#18-SPARQL-的定义" class="headerlink" title="18 SPARQL 的定义"></a>18 SPARQL 的定义</h2><p>给定查询字符串和RDF数据集，本节定义了用于评估图形模式和解决方案修饰符的正确行为。这并不意味着SPARQL实现必须使用此处定义的过程。</p>
 <p>执行SPARQL查询的结果由一系列步骤定义，从SPARQL查询作为字符串开始，将该字符串转换为抽象语法形式，然后将抽象语法转换为包含SPARQL代数运算符的SPARQL抽象查询。然后，在RDF数据集上评估此抽象查询。</p>
-<h3 id="18-1-初始定义"><a href="#18-1-初始定义" class="headerlink" title="18.1 初始定义"></a>18.1 初始定义</h3><h4 id="18-1-1-RDF-Terms"><a href="#18-1-1-RDF-Terms" class="headerlink" title="18.1.1 RDF Terms"></a>18.1.1 RDF Terms</h4>
+<h3 id="18-1-初始定义"><a href="#18-1-初始定义" class="headerlink" title="18.1 初始定义"></a>18.1 初始定义</h3><h4 id="18-1-1-RDF-Terms"><a href="#18-1-1-RDF-Terms" class="headerlink" title="18.1.1 RDF Terms"></a>18.1.1 RDF Terms</h4><p>SPARQL是根据IRIs 定义的。IRIs是RDF URI引用的子集，它忽略了空格的使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Definition: RDF Term</span><br><span class="line">I是所有IRIs的集合.</span><br><span class="line">RDF-L是所有RDF Literals的集合</span><br><span class="line">RDF-B是RDF图中所有空节点的集合</span><br><span class="line">RDF Terms的集合, RDF-T, 是I ∪ RDF-L ∪ RDF-B.</span><br></pre></td></tr></table></figure>
+<p><strong>RDF Term</strong>此定义从RDF数据模型收集了几个基本概念 ，但已更新为引用IRI而不是RDF URI引用。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/21/SPARQL%201.1%20%E7%AC%94%E8%AE%B0(%E5%9B%9B)/#more" rel="contents">
@@ -528,7 +536,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-22 16:55:28" itemprop="dateModified" datetime="2021-03-22T16:55:28+08:00">2021-03-22</time>
+                <time title="修改时间：2021-03-31 20:18:52" itemprop="dateModified" datetime="2021-03-31T20:18:52+08:00">2021-03-31</time>
               </span>
 
           <br>
@@ -617,7 +625,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-22 10:42:20" itemprop="dateModified" datetime="2021-03-22T10:42:20+08:00">2021-03-22</time>
+                <time title="修改时间：2021-03-31 20:18:38" itemprop="dateModified" datetime="2021-03-31T20:18:38+08:00">2021-03-31</time>
               </span>
 
           <br>
@@ -649,6 +657,8 @@
 <p>由于SPARQL查询评估的自下而上的性质，因此<u>先对子查询</u>进行逻辑评估，然后将结果投影到外部查询。</p>
 <p>请注意，只有从子查询之外，或者在作用域内投影的变量对外部查询是可见的。</p>
 <p><strong>数据</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@prefix : &lt;http:&#x2F;&#x2F;people.example&#x2F;&gt; .</span><br><span class="line"></span><br><span class="line">:alice :name &quot;Alice&quot;, &quot;Alice Foo&quot;, &quot;A. Foo&quot; .</span><br><span class="line">:alice :knows :bob, :carol .</span><br><span class="line">:bob :name &quot;Bob&quot;, &quot;Bob Bar&quot;, &quot;B. Bar&quot; .</span><br><span class="line">:carol :name &quot;Carol&quot;, &quot;Carol Baz&quot;, &quot;C. Baz&quot; .</span><br></pre></td></tr></table></figure>
+<p>为所有认识爱丽丝并有名字的人返回一个名字（排序最低的名字）。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/21/SPARQL%201.1%20%E7%AC%94%E8%AE%B0(%E4%BA%8C)/#more" rel="contents">
@@ -706,7 +716,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-23 15:06:54" itemprop="dateModified" datetime="2021-03-23T15:06:54+08:00">2021-03-23</time>
+                <time title="修改时间：2021-03-31 20:19:17" itemprop="dateModified" datetime="2021-03-31T20:19:17+08:00">2021-03-31</time>
               </span>
 
           <br>
@@ -736,7 +746,6 @@
       
           <h1 id="SPARQL-1-1"><a href="#SPARQL-1-1" class="headerlink" title="SPARQL 1.1"></a>SPARQL 1.1</h1><h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1 引言"></a>1 引言</h2><p>RDF是一种有向的、带标签的图形数据格式，用于表示Web中的信息。RDF通常用于表示个人信息、社交网络、有关数字工件的元数据，以及提供一种跨不同信息源的集成方式。本规范定义了RDF的SPARQL查询语言的语法和语义。</p>
 <p>用于RDF的SPARQL查询语言旨在满足RDF数据访问用例和需求[UCNR]和SPARQL新功能和原理[UCNR2]中RDF数据访问工作组确定的用例和需求。</p>
-<h3 id="1-1-文档大纲"><a href="#1-1-文档大纲" class="headerlink" title="1.1 文档大纲"></a>1.1 文档大纲</h3>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/21/SPARQL%201.1%20%E7%AC%94%E8%AE%B0(%E4%B8%80)/#more" rel="contents">
@@ -794,7 +803,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-21 11:16:07" itemprop="dateModified" datetime="2021-03-21T11:16:07+08:00">2021-03-21</time>
+                <time title="修改时间：2021-03-31 20:18:24" itemprop="dateModified" datetime="2021-03-31T20:18:24+08:00">2021-03-31</time>
               </span>
 
           <br>
@@ -825,7 +834,6 @@
           <h2 id="8-RDF-解释"><a href="#8-RDF-解释" class="headerlink" title="8. RDF 解释"></a>8. RDF 解释</h2><p>RDF解释对<code>xsd:string</code>和部分带有命名空间前缀IRIs的无限集合的施加了额外的语义条件。</p>
 <p><strong>RDF词汇表</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">rdf:type </span><br><span class="line">rdf:subject </span><br><span class="line">rdf:predicate </span><br><span class="line">rdf:object </span><br><span class="line">rdf:first </span><br><span class="line">rdf:rest </span><br><span class="line">rdf:value </span><br><span class="line">rdf:nil </span><br><span class="line">rdf:List </span><br><span class="line">rdf:langString </span><br><span class="line">rdf:Property </span><br><span class="line">rdf:_1 </span><br><span class="line">rdf:_2 ...</span><br></pre></td></tr></table></figure>
-<p>识别D的RDF解释是D-interpretation ，其中D包括<code>rdf：langString</code>和<code>xsd：string</code>，并且满足：</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/19/RDF%20Semantics%201.1%20%E7%AC%94%E8%AE%B0(%E4%BA%8C)/#more" rel="contents">
@@ -883,7 +891,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-30 16:56:14" itemprop="dateModified" datetime="2021-03-30T16:56:14+08:00">2021-03-30</time>
+                <time title="修改时间：2021-03-31 20:18:30" itemprop="dateModified" datetime="2021-03-31T20:18:30+08:00">2021-03-31</time>
               </span>
 
           <br>
@@ -913,6 +921,7 @@
       
           <h1 id="RDF-Semantics"><a href="#RDF-Semantics" class="headerlink" title="RDF Semantics"></a>RDF Semantics</h1><h2 id="1-引言"><a href="#1-引言" class="headerlink" title="1. 引言"></a>1. 引言</h2><p>这篇文档为RDF图和RDF及RDFS词汇表定义了一个模型-理论语义，为转换RDF或者从其他RDF派生RDF内容的操作时，提供了正式的确切规定。</p>
 <h2 id="2-标准"><a href="#2-标准" class="headerlink" title="2. 标准"></a>2. 标准</h2><p>除了标记为非规范之外，所有的指南，图表，示例和注释都是非规范。其他内容均为规范。</p>
+<p>这篇文档包含了RDF的语义规范以及RDF推理过程的有效性。对于RDF含义的许多方面而言，这不是规范的，这些语义并未对此进行描述或指定，包括社会问题，这些问题涉及如何分配IRI使用中的含义，以及IRI的引用对象如何与其他媒体（如自然语言文本）中表达的Web内容相关联。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/19/RDF%20Semantics%201.1%20%E7%AC%94%E8%AE%B0(%E4%B8%80)/#more" rel="contents">
@@ -962,10 +971,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-15 19:40:13 / 修改时间：19:55:30" itemprop="dateCreated datePublished" datetime="2021-03-15T19:40:13+08:00">2021-03-15</time>
+              <time title="创建时间：2021-03-15 19:40:13" itemprop="dateCreated datePublished" datetime="2021-03-15T19:40:13+08:00">2021-03-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-31 20:18:08" itemprop="dateModified" datetime="2021-03-31T20:18:08+08:00">2021-03-31</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -1017,11 +1032,546 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/25/%E6%A0%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="Cheryl Qi">
+      <meta itemprop="description" content="Cheryl's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheryl Qi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/25/%E6%A0%91/" class="post-title-link" itemprop="url">树</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-25 14:12:54" itemprop="dateCreated datePublished" datetime="2021-02-25T14:12:54+08:00">2021-02-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-31 20:19:42" itemprop="dateModified" datetime="2021-03-31T20:19:42+08:00">2021-03-31</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>9 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><ul>
+<li><strong>满二叉树：</strong>除最后一层无任何子节点外，每一层上的所有结点都有两个子结点的二叉树，深度为k，有$2^k-1$个节点。</li>
+<li><strong>完全二叉树：</strong>叶子结点只能出现在最下层和次下层，且最下层的叶子结点集中在树的左部，若最底层为第 k 层，则该层包含 $2^h$个节点。</li>
+</ul>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/25/%E6%A0%91/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="Cheryl Qi">
+      <meta itemprop="description" content="Cheryl's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheryl Qi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" class="post-title-link" itemprop="url">栈与队列</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-20 19:11:19" itemprop="dateCreated datePublished" datetime="2021-02-20T19:11:19+08:00">2021-02-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-31 20:20:05" itemprop="dateModified" datetime="2021-03-31T20:20:05+08:00">2021-03-31</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>851</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h1><p><strong>栈：先进后出；队列：先进先出</strong></p>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><h3 id="232-栈实现队列"><a href="#232-栈实现队列" class="headerlink" title="232. 栈实现队列"></a>232. 栈实现队列</h3><p>思路：栈A完成放入元素操作；移除元素时，如果栈B为空，则从栈A弹出所有元素放入栈B，若不空，则弹出栈B元素；首部元素可以<strong>复用</strong>移除元素的方法，取到首部元素后，再将该元素放入栈B，保证再次需要移除元素时可以弹出该元素；当栈A和栈B都非空时，则队列空。</p>
+<h3 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a>20. 有效的括号</h3><p>思路：遍历括号字符数组，如果是左括号就将对应的右括号入栈，如果是右括号且栈非空，就弹出栈顶元素，并判断栈顶元素是否和该右括号相同，如果是则继续判断，如果不是则返回false。最后如果栈为空则返回true，否则返回false。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/20/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/10/%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="Cheryl Qi">
+      <meta itemprop="description" content="Cheryl's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheryl Qi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/10/%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">数组</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-10 18:23:37" itemprop="dateCreated datePublished" datetime="2021-02-10T18:23:37+08:00">2021-02-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-31 20:19:56" itemprop="dateModified" datetime="2021-03-31T20:19:56+08:00">2021-03-31</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>984</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p><strong>存放在连续内存空间上的相同类型数据的集合，二维数组不连续。</strong></p>
+<h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>题目要点：有序、无重复元素。</p>
+<p>思路：不断缩小查找范围</p>
+<p>① 当在循环体内可以找到<strong>确定的目标解</strong>时，且目标解一定在<code>[0,len(nums)-1]</code> 的区间内，此时的右边界初始化为<code>len(nums)-1</code>，循环条件为<code>left&lt;=right</code>，这样可以判断到<strong>每一个元素</strong>。</p>
+<p> ② 当需要搜索边界问题或插入位置等问题时，根据目标解的可能位置，决定右边界的初始值。循环时的条件为<code>left&lt;right</code> ，循环体内通过<strong>排除</strong>元素不可能存在的区间，始终将区间视为左闭右闭区间<code>[left, right]</code>，来缩小查询范围。退出循环时<code>left==right</code>，且区间内只有一个元素。视情况决定是否需要判断该元素满不满足条件。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/10/%E6%95%B0%E7%BB%84/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/10/JavaScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="Cheryl Qi">
+      <meta itemprop="description" content="Cheryl's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheryl Qi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/10/JavaScript/" class="post-title-link" itemprop="url">JavaScript</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-10 18:21:46" itemprop="dateCreated datePublished" datetime="2021-02-10T18:21:46+08:00">2021-02-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-31 20:18:01" itemprop="dateModified" datetime="2021-03-31T20:18:01+08:00">2021-03-31</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><h2 id="JavaScript引入方式"><a href="#JavaScript引入方式" class="headerlink" title="JavaScript引入方式"></a>JavaScript引入方式</h2><h3 id="外部引入"><a href="#外部引入" class="headerlink" title="外部引入"></a>外部引入</h3><p>是最常用的方式，将JS代码单独写入一个文件中，引入时<code>&lt;script src=&quot;test.js&quot;&gt;</code>，可以提高网站的性能和可维护性。</p>
+<h3 id="内部引入"><a href="#内部引入" class="headerlink" title="内部引入"></a>内部引入</h3><p>通常在head中引入，也可以在body中引入，在body中引入时放在底部，可以保证浏览器先解析HTML内容，用户的体验好，同时避免JavaScript操作DOM失效。</p>
+<h3 id="行内引入"><a href="#行内引入" class="headerlink" title="行内引入"></a>行内引入</h3><p>直接写在html语句中，这种方法会产生冗余代码，不利于维护。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/10/JavaScript/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/05/CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="Cheryl Qi">
+      <meta itemprop="description" content="Cheryl's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheryl Qi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/05/CSS/" class="post-title-link" itemprop="url">CSS</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-05 18:21:34" itemprop="dateCreated datePublished" datetime="2021-02-05T18:21:34+08:00">2021-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-31 20:17:47" itemprop="dateModified" datetime="2021-03-31T20:17:47+08:00">2021-03-31</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p>CSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观。</p>
+<h2 id="CSS引入方式"><a href="#CSS引入方式" class="headerlink" title="CSS引入方式"></a>CSS引入方式</h2><p>（1）外部样式表。</p>
+<p>（2）内部样式表。</p>
+<p>（3）行内样式表。</p>
+<p>还有一种@import方式，他是先加载HTML后加载CSS，而link先加载CSS后加载HTML。如果HTML在CSS之前加载，页面用户体验非常差。外部样式表多用于公有样式，内部样式表多用于私有样式，而行内样式更多用于小修改或者优先级方面。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/05/CSS/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://cherylqi.top/2021/02/01/HTML/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="Cheryl Qi">
+      <meta itemprop="description" content="Cheryl's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cheryl Qi">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/01/HTML/" class="post-title-link" itemprop="url">HTML</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-01 16:25:20" itemprop="dateCreated datePublished" datetime="2021-02-01T16:25:20+08:00">2021-02-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-31 20:17:54" itemprop="dateModified" datetime="2021-03-31T20:17:54+08:00">2021-03-31</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><p>HTML，全称Hyper Text  Markup Language（超文本标记语言），是一门描述性语言，用于控制网页的结构。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;标签符&gt;内容&lt;/标签符&gt;</span><br></pre></td></tr></table></figure>
+<p>标签也可以说成元素，是标记内容的类别，让浏览器将代码解释成页面效果，呈现给用户。</p>
+<h2 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构"></a><strong>HTML结构</strong></h2><p>（1）文档声明：<code>&lt;!DOCTYPE html&gt;</code></p>
+<p>（2）html标签对：<code>&lt;html&gt;&lt;/html&gt;</code></p>
+<p>（3）head标签对：<code>&lt;head&gt;&lt;/head&gt;</code></p>
+<p>（4）body标签对：<code>&lt;body&gt;&lt;/body&gt;</code></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/01/HTML/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -1105,6 +1655,18 @@
 
       </div>
 
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+          <h3 class="widget-title"></h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+            <canvas width="250" height="250" id="resCanvas" style="width:100%">
+              <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%B6%E5%BA%8F%E6%95%B0%E6%8D%AE/" rel="tag">时序数据</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE/" rel="tag">空间数据</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%AD%E4%B9%89Web/" rel="tag">语义Web</a><span class="tag-list-count">8</span></li></ul>
+            </canvas>
+          </div>
+        </div>
+      
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
