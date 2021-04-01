@@ -88,17 +88,17 @@ ground 图都是lean
 ex:a ex:p _:x .
 ```
 
-![https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example1.jpg](https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example1.jpg)
+![example1](https://tva3.sinaimg.cn/large/005SZbikly1gp4jsrv4rrj309101zdfr.jpg)
 
 ```
 ex:b ex:q _:x .
 ```
 
-![https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example2.jpg](https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example2.jpg)
+![example2](https://tvax4.sinaimg.cn/large/005SZbikly1gp4jtct4nxj309201za9z.jpg)
 
 联合后应该包含四个节点。
 
-![https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example4.jpg](https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example4.jpg)
+![union1](https://tva3.sinaimg.cn/large/005SZbikly1gp4jto8c8fj309203qjrg.jpg)
 
 然而，将这些表面展示的文本简单的联接：
 
@@ -109,7 +109,7 @@ ex:b ex:q _:x .
 
 描述的图包含三个节点
 
-![https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example3.jpg](https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example3.jpg)
+![union2](https://tvax1.sinaimg.cn/large/005SZbikly1gp4jtzcng8j309203fmx7.jpg)
 
 因为在公共标识符范围中两次出现的空节点标识符"\_:x"标识了相同的空白节点。这两个图的四个节点的联合可以用这种形式更恰当的描述：
 
@@ -124,11 +124,11 @@ ex:b ex:q _:x2 .
 
 一个相关的运算，称为merging，是在共享多个图中出现并且都不同的空节点后，得到联合。结果图称为**merge**。一个图的子图merge可能比原图大。比如，合并两个三节点图的单一子图。（note:空节点经过重新命名）
 
-![https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example3.jpg](https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example3.jpg)
+![merge1](https://tva2.sinaimg.cn/large/005SZbikly1gp4ju7w9tkj309203fmx7.jpg)
 
 是一个四节点图
 
-![https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example4.jpg](https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example4.jpg)
+![merge2](https://tva2.sinaimg.cn/large/005SZbikly1gp4juh5a7jj309203qjrg.jpg)
 
 联合永远是merge的实例(两个节点已经映射到同一个空节点)。如果图没有共同的空节点，则他们的union和merge是相同的。
 
@@ -199,7 +199,7 @@ ground 图的语义条件
 
 空节点的语义是根据图的真实性来陈述的。然而，当多个图共享一个空节点时，并不能通过单独处理的方式获取他们的语义。例如，这两个重叠的图
 
-![https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example5.jpg](https://www.w3.org/TR/rdf11-mt/RDF11SemanticsDiagrams/example5.jpg)
+​	                            ![shareBlankNode](https://tvax1.sinaimg.cn/large/005SZbikly1gp4jv2v9eaj30cq05l74i.jpg)
 
 一个简单的解释**I** `{Alice, Bob, Monica, Ruth}`
 
