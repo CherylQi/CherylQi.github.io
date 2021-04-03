@@ -4,8 +4,6 @@ date: 2021-02-10 18:21:46
 tags: 前端
 ---
 
-# JavaScript
-
 ## JavaScript引入方式
 
 ### 外部引入

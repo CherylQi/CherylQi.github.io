@@ -4,8 +4,6 @@ date: 2021-03-15 19:40:13
 tags: 语义Web
 ---
 
-# RDF Primer
-
 ## 1. 引言
 
 RDF（Resource Description Framework）资源描述框架，是一个表达关于资源的信息的框架。资源可以是任何事物，包括文档，人，物理对象，抽象内容。

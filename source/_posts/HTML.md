@@ -4,8 +4,6 @@ date: 2021-02-01 16:25:20
 tags: 前端
 ---
 
-# HTML
-
 HTML，全称Hyper Text  Markup Language（超文本标记语言），是一门描述性语言，用于控制网页的结构。
 
 **语法：**
