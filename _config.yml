@@ -142,3 +142,18 @@ tag_cloud:
     outlineColor: '#E2E1D1'
     maxSpeed: 0.23
     pauseOnSelected: true # true 意味着当选中对应 tag 时,停止转动
+
+math:
+  engine: 'katex'
+  mathjax:
+
+markdown_it_plus:
+    highlight: true
+    html: true
+    xhtmlOut: true
+    breaks: true
+    langPrefix:
+    linkify: true
+    typographer:
+    quotes: “”‘’
+    pre_class: highlight
