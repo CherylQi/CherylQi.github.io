@@ -138,16 +138,6 @@ Philippe Muller, 1998
 
 **D 5.14** 定义了动作CROSS，存在$z_1$ 和$z_2$ ，$z$ 是$z_1$ 和 $z_2$ 的和，且$z_1$ 和$z_2$ 相遇，且在$z_1$ 范围$x$ 到达$y$ ，在$z_2$ 范围$x$ 离开$y$。
 
-#### 关于动作类的推理
-
-
-
-
-
-
-
-
-
 
 
 ## Space-Time as a Primitive for Space and Motion
