@@ -1,7 +1,7 @@
 ---
 title: spatio-temporal论文笔记
 date: 2021-04-16 10:27:48
-tags: 时空推理
+tags: 时空关系
 ---
 
 ## A Qualitative Theory of Motion Based on Spatio-Temporal Primitives
