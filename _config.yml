@@ -73,7 +73,7 @@ prism_plugin:
 index_generator:
   path: ''
   per_page: 0
-  order_by: -date
+  order_by: -updated
 
 # Category & Tag
 default_category: uncategorized
