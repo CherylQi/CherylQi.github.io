@@ -144,16 +144,17 @@ tag_cloud:
     pauseOnSelected: true # true 意味着当选中对应 tag 时,停止转动
 
 math:
-  engine: 'katex'
-  mathjax:
+  engine: 'mathjax'
+  mathjax: 
+      src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML
 
-markdown_it_plus:
-    highlight: true
-    html: true
-    xhtmlOut: true
-    breaks: true
-    langPrefix:
-    linkify: true
-    typographer:
-    quotes: “”‘’
-    pre_class: highlight
+# markdown_it_plus:
+#     highlight: true
+#     html: true
+#     xhtmlOut: true
+#     breaks: true
+#     langPrefix:
+#     linkify: true
+#     typographer:
+#     quotes: “”‘’
+#     pre_class: highlight
