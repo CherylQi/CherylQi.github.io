@@ -132,7 +132,7 @@ deploy:
   repo: 
      github: git@github.com:CherylQi/CherylQi.github.io.git,master
      coding: git@e.coding.net:cherylqi/cherylqi.coding.me/cherylqi.coding.me.git,master
-     gitee: git@gitee.com:cherylqi/cherylqi.git, hexo
+     gitee: git@gitee.com:cherylqi/cherylqi.git,master
   # branch: master
 
 tag_cloud:
