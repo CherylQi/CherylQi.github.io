@@ -3,6 +3,7 @@ title: Spatial论文笔记
 date: 2021-04-13 08:14:50
 updated: 2021-04-20 18:36:58
 tags: 空间数据
+mathjax: true
 ---
 
 **开集**：是自己每个点的邻域。

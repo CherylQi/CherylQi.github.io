@@ -3,15 +3,16 @@ title: stRDF论文笔记
 date: 2021-04-22 08:46:44
 updated: 2021-04-22 08:46:44
 tags: 时空推理
+mathjax: true
 ---
 
-## Modeling and Querying Metadata in the Semantic Sensor Web: The Model stRDF and the Query Language stSPARQL  
+## Modeling and Querying Metadata in the Semantic Sensor Web: The Model stRDF and the Query Language stSPARQL
 
 Manolis Koubarakis and Kostis Kyzirakos ， 2010
 
 本文扩展了语义传感器网络中常用的元数据模型RDF，可以表示传感器的空间位置、传感器的移动轨迹、传感器网络的覆盖范围、传感器捕获的有效时间。
 
-本文采用n维空间$\Q^n$ 中的**半线性**点集表示空间几何，也就是线性方程的一阶逻辑和不等式中的**无量词公式**的集合。
+本文采用n维空间$\mathbb Q^n$ 中的**半线性**点集表示空间几何，也就是线性方程的一阶逻辑和不等式中的**无量词公式**的集合。
 
 半线性点集可以表示点、线、线段和多边形（不能表示高次多项式，如：圆）。
 
@@ -19,7 +20,7 @@ Manolis Koubarakis and Kostis Kyzirakos ， 2010
 
 #### 线性约束
 
-约束以一阶语言$\mathcal L=\{\leq, \ +\} \cup \Q$表示，结构为$\mathcal Q=<\Q,\ \leq,\ (q)_{q\in\Q}>$，由$\Q$表示的线性有序、稠密且无界的有理数集。
+约束以一阶语言$\mathcal L=\{\leq, \ +\} \cup \mathbb Q$表示，结构为$\mathcal Q=<\mathbb Q,\ \leq,\ (q)_{q\in\mathbb  Q }>$，由$\mathbb Q$表示的线性有序、稠密且无界的有理数集。
 
 该语言的原子公式是线性方程和不等式:
 $$
@@ -27,7 +28,7 @@ $$
 $$
 其中，$\Theta$ 是$=$ 或 $\leq$ 中的谓词，$x_i$ 表示变量，$a_i$是整型常量。
 
-**定义1**：令$S$是$\Q^k$ 的子集，如果有$\mathcal L$的无量词公式$\empty(x_1,...x_k)$，其中$x_1,...x_k$是变量，使得当且仅当$\empty(x_1,...x_k)$ 在结构$\mathcal Q$为真，$(a_1,...a_k)\in S$，则$S$是半线性的。
+**定义1**：令$S$是$\mathbb Q^k$ 的子集，如果有$\mathcal L$的无量词公式$\emptyset(x_1,...x_k)$，其中$x_1,...x_k$是变量，使得当且仅当$\emptyset(x_1,...x_k)$ 在结构$\mathcal Q$为真，$(a_1,...a_k)\in S$，则$S$是半线性的。
 
 #### sRDF数据模型
 
