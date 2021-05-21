@@ -147,9 +147,9 @@ Anisa Rula, 2012
 
 - 基于具体化的表示：令$<s,p,o>$为一个语句，$s^{st}$标识一个语句，$a^b_S$和$a_S^e$ 是两个时序属性，$[t^b:t^e]$是一个时间区间。表示为：
 
-  <$s^{st}$, rdf: type, rdf: Statement>
+  \<$s^{st}$, rdf: type, rdf: Statement\>
 
-  <$s^{st}$, rdf: subject, $s$>
+  \<$s^{st}$, rdf: subject, $s$\>
 
   <$s^{st}$, rdf: predicate, $p$>
 
