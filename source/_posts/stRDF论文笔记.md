@@ -1,7 +1,7 @@
 ---
 title: stRDF论文笔记
 date: 2021-04-22 08:46:44
-updated: 2021-04-22 08:46:44
+updated: 2021-05-27 21:10:15
 tags: 时空推理
 mathjax: true
 ---
@@ -93,3 +93,29 @@ RDF已经支持用户定义时间，stRDF扩展了有效时间的表示。时序
 (ii) 对$1\leq i\leq l$ 有 $\pi_W(\mu)(x_i)=\mu(x_i)$；对$1\leq j \leq m$ 有 $\pi_W(\mu)(z_j)=\mu(t_j)$
 
 **定义16**：stSPARQL查询是$(W,P)$对，其中$W$是投影，$P$是图模式。在图G上的查询$(W,P)$是映射集合${\pi_W(\mu)\ |\ \mu\in[[P]]}$.
+
+## A data model and query language for an extension of RDF with time and space
+
+Manolis Koubarakis, 2012 用户定义时间+OGC [WKT+GML]
+
+本文关于空间的表示采用OGC标准表示几何信息，关于时间的表示只包含了用户定义时间，
+
+简单特征既有空间属性也有非空间属性。其中，空间属性表示为几何值列，非空间属性表示为标准SQL数据类型列。
+
+有两种类型的特征表的实现方式：
+
+1. 仅使用SQL预定义数据类型
+
+    基于经典的SQL关系表和存储在几何值列的几何对象(几何id);
+    
+    预定义类型：几何以坐标值存储
+
+    二元类型：几何对象的well known binary表示
+
+2. 具有几何类型的SQL
+
+    SQL定义了新的几何数据类型
+
+    没提供用于访问基于预定义SQL数据类型中的SQL**函数**
+
+    **利用stSPARQL实现几何函数**： 为每个函数定义一个URI，如`srdf: Contains`。在引入SPARQL时，可以采用`xsd:boolean srdf:Contains(srdf:geometry g1, srdf: geometry g2)`。函数的参数可以时变量，空间文字(WKT或GML)或其他扩展函数。其实就是将原函数定义一个返回值类型，并且改为`srdf: ____`形式，运算形式没有变化。空间术语包括空间文字，空间变量和复杂空间术语（空间谓词中拓扑、距离和方向，现在只有拓扑关系用于空间过滤表达式）。
