@@ -8,11 +8,11 @@ mathjax: true
 
 ## Modeling and Querying Metadata in the Semantic Sensor Web: The Model stRDF and the Query Language stSPARQL
 
-Manolis Koubarakis and Kostis Kyzirakos ， 2010
+Manolis Koubarakis and Kostis Kyzirakos ， 2010 有效时间+空间几何（点、线、线段、多边形）
 
 本文扩展了语义传感器网络中常用的元数据模型RDF，可以表示传感器的空间位置、传感器的移动轨迹、传感器网络的覆盖范围、传感器捕获的有效时间。
 
-本文采用n维空间$\mathbb Q^n$ 中的**半线性**点集表示空间几何，也就是线性方程的一阶逻辑和不等式中的**无量词公式**的集合。
+本文采用n维空间$\mathbb Q^n$ 中的<u>**半线性**</u>点集表示空间几何，也就是线性方程的一阶逻辑和不等式中的**无量词公式**的集合。
 
 半线性点集可以表示点、线、线段和多边形（不能表示高次多项式，如：圆）。
 
@@ -94,6 +94,8 @@ RDF已经支持用户定义时间，stRDF扩展了有效时间的表示。时序
 
 **定义16**：stSPARQL查询是$(W,P)$对，其中$W$是投影，$P$是图模式。在图G上的查询$(W,P)$是映射集合${\pi_W(\mu)\ |\ \mu\in[[P]]}$.
 
+
+
 ## A data model and query language for an extension of RDF with time and space
 
 Manolis Koubarakis, 2012 用户定义时间+OGC [WKT+GML]
@@ -116,6 +118,6 @@ Manolis Koubarakis, 2012 用户定义时间+OGC [WKT+GML]
 
     SQL定义了新的几何数据类型
 
-    没提供用于访问基于预定义SQL数据类型中的SQL**函数**
+    没提供用于访问基于预定义SQL数据类型中的SQL函数
 
-    **利用stSPARQL实现几何函数**： 为每个函数定义一个URI，如`srdf: Contains`。在引入SPARQL时，可以采用`xsd:boolean srdf:Contains(srdf:geometry g1, srdf: geometry g2)`。函数的参数可以时变量，空间文字(WKT或GML)或其他扩展函数。其实就是将原函数定义一个返回值类型，并且改为`srdf: ____`形式，运算形式没有变化。空间术语包括空间文字，空间变量和复杂空间术语（空间谓词中拓扑、距离和方向，现在只有拓扑关系用于空间过滤表达式）。
+**利用stSPARQL实现几何函数**： 为每个函数定义一个URI，如`srdf: Contains`。在引入SPARQL时，可以采用`xsd:boolean srdf:Contains(srdf:geometry g1, srdf: geometry g2)`。函数的参数可以时变量，空间文字(WKT或GML)或其他扩展函数。其实就是将原函数定义一个返回值类型，并且改为`srdf: ____`形式，运算形式没有变化。空间术语包括空间文字，空间变量和复杂空间术语（空间谓词中拓扑、距离和方向，现在只有拓扑关系用于空间过滤表达式）。
