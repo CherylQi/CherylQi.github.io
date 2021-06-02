@@ -858,7 +858,7 @@ literal  STRLANG(simple literal lexicalForm, simple literal langTag)
 iri  UUID()
 ```
 
-从UUID URN方案返回一个新的IRI 。每次调用都会`UUID()` 返回不同的UUID。它不能是“ nil” UUID（全零）。UUID的变体和版本取决于实现。
+从UUID URN方案返回一个新的IRI 。每次调用`UUID()`都会 返回不同的UUID。它不能是“ nil” UUID（全零）。UUID的变体和版本取决于实现。
 
 | `UUID()` | `<urn:uuid:b9302fb5-642e-4d3b-af19-29a8f6d894c9>` |
 | -------- | ------------------------------------------------- |
