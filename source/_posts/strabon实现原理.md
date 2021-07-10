@@ -1,7 +1,7 @@
 ---
 title: strabon实现原理
 date: 2021-07-07 10:06:38
-updated: 2021-07-07 10:06:38
+updated: 2021-07-10 14:40:53
 tags: 时空关系
 ---
 
@@ -13,7 +13,7 @@ Strabon以透明的方式包含在RDF4J软件堆栈的层中，不会影响RDF4J
 
 **PostGIS**：既用于stRDF数据的存储，也用于stsPARQL查询的评估。
 
-
+strabon源码环境：jdk 1.6, tomcat 6.0.53, maven 3.2.3(解决https错误)
 
 
 
