@@ -129,6 +129,8 @@ excerpt:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
+  name: CherylQi
+  email: qiyichen_619@163.com 
   repo: 
      github: git@github.com:CherylQi/CherylQi.github.io.git
     #  coding: git@e.coding.net:cherylqi/cherylqi.coding.me/cherylqi.coding.me.git
@@ -144,7 +146,7 @@ tag_cloud:
     pauseOnSelected: true # true 意味着当选中对应 tag 时,停止转动
 
 math:
-  engine: 'mathjax'
+  engine: 'katex'
   mathjax: 
       src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML
 
