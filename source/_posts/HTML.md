@@ -1,7 +1,7 @@
 ---
 title: HTML
 date: 2021-02-01 16:25:20
-updated: 2021-04-03 09:20:32
+updated: 2021-07-28 21:12:09
 tags: 前端
 ---
 
@@ -17,7 +17,7 @@ HTML，全称Hyper Text  Markup Language（超文本标记语言），是一门�
 
 ## **HTML结构**
 
-（1）文档声明：`<!DOCTYPE html>`
+（1）文档声明：`<!DOCTYPE html>`说明按照html5标准解析页面
 
 （2）html标签对：`<html></html>`
 
@@ -57,15 +57,15 @@ HTML，全称Hyper Text  Markup Language（超文本标记语言），是一门�
 
 使用p标签会导致段落与段落之间有一定的间隙，而使用br(break)标签则不会。
 
-br(自闭合)标签是用来给文字换行的，并且只用于**段落(p标签)**中的换行，而p标签是用来给文字分段的。
+br(自闭合)标签是用来给文字换行的，并且只用于**段落(paragraph标签)**中的换行，而p标签是用来给文字分段的。
 
 strong或者em标签内部的文本被强调为重要文本，并且搜索引擎对这两个标签也赋予一定的权重。
 
 常用标签：
 
-（1）粗体标签：strong、b
+（1）粗体标签：strong(语义更强烈)、b
 
-（2）斜体标签：i、em(emphasized)、cite
+（2）斜体标签：i、em(emphasized语义更强烈)、cite
 
 （3）上标标签：sup(superscripted)
 
@@ -73,7 +73,7 @@ strong或者em标签内部的文本被强调为重要文本，并且搜索引擎
 
 （5）中划线标签：s
 
-（6）下划线标签：u(underline)
+（6）下划线标签：ins(语义更强烈)、u(underline)
 
 （7）大字号标签：big
 
@@ -81,9 +81,7 @@ strong或者em标签内部的文本被强调为重要文本，并且搜索引擎
 
 （9）水平线标签：hr(horizon)(自闭合)
 
-  (10)  文本被删除：del 	eg. ~~删除~~
-
-  (11)  更新文本：ins
+  (10)  文本被删除：del(语义更强烈)、s (eg. ~~删除~~)
 
 **块(block)元素和行内(inline)元素**：
 
@@ -95,9 +93,13 @@ inline-block元素：既具备块元素的特点，也具备行内元素的特�
 
 ## 列表标签
 
+用于布局页面
+
 ### 有序列表（ol, ordered list）
 
 子标签只能是`<li>`标签，并且可以通过type属性更改列表项符号。
+
+`<li>`标签内可以放任何标签。
 
 ### 无序列表（ul, unordered list）
 
@@ -106,6 +108,8 @@ inline-block元素：既具备块元素的特点，也具备行内元素的特�
 ### 定义列表
 
 dl即definition list（定义列表）；dt即definition term（定义名词）；dd即definition description（定义描述）。
+
+dl内只包含dt和dd；通常是一个dt对应多个dd；dt和dd内可以放任何标签
 
 ```html
 <dl>
@@ -119,12 +123,13 @@ dl即definition list（定义列表）；dt即definition term（定义名词）�
 
 ## 表格标签
 
-table表示表格；tr（table row）表示行；td（table data cell）表示单元格。tr数即行数，td数即列数。
+table表示表格，用于展示数据；tr（table row）表示行；td（table data cell）表示单元格。tr数即行数，td数即列数。
+单元格内可以放任何元素，包括文字图片和链接等。
 
 ```html
 <table>
     <caption>表格标题</caption>
-    <!--表头-->
+    <!--表头，文字居中加粗显示-->
     <thead>
         <tr>
             <th>表头单元格1</th>
@@ -164,15 +169,19 @@ table表示表格；tr（table row）表示行；td（table data cell）表示�
 <td colspan = "跨越的列数"></td>
 ```
 
+合并后记得删除多余单元格
+
 
 
 ## 图片标签
 
+src为必须属性，用于指定图像文件的路径和文件名
+
 ```html
-<img src="图片路径" alt="提示文字" title="提示文字" />
+<img src="图片路径" alt="替换文字" title="提示文字" width height border/>
 ```
 
-**记**：如果图片作为HTML的一部分，并且想被搜索引擎识别，使用img标签；如果仅仅作为修饰，则使用背景图片，通过CSS实现的。网页中图片大多使用位图。
+**记**：如果图片作为HTML的一部分，并且想被搜索引擎识别，使用img标签；如果仅仅作为修饰，则使用背景图片，通过CSS实现的。网页中图片大多使用位图。	
 
 **alt属性在搜索引擎优化中也很重要，会被赋予一定的权重。**
 
@@ -207,6 +216,10 @@ table表示表格；tr（table row）表示行；td（table data cell）表示�
 锚点链接：链接地址为本页面内某部分的`#id`。
 
 不确定链接地址时使用固定链接"#"。
+
+下载链接：如果href内是一个压缩包或文件，会下载该文件
+
+在网页中的各种元素，如文本、图像、表格、音频、视频等都可以添加超链接
 
 
 
@@ -273,3 +286,7 @@ multiple设置下拉列表可以选择多项；size设置下拉列表显示几�
 div和span两个标签没有语义，配合CSS应用样式。
 
 可以包含任何块元素和行内元素，不会与其他元素位于同一行；span是行内元素，可以与其他行内元素位于同一行。
+
+## 特殊字符
+
+![image-20210727222218564](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210727222218564.png)
