@@ -1,7 +1,7 @@
 ---
 title: HTML
 date: 2021-02-01 16:25:20
-updated: 2021-07-28 21:12:09
+updated: 2021-07-29 22:03:39
 tags: 前端
 ---
 
@@ -225,8 +225,12 @@ src为必须属性，用于指定图像文件的路径和文件名
 
 ## 表单标签
 
+[![WqyKGn.png](https://z3.ax1x.com/2021/07/29/WqyKGn.png)](https://imgtu.com/i/WqyKGn)
+
+<form>用于定义表单域，实现用户信息的收集和传递，把表单元素信息提交给服务器
+
 ```html
-<form name="Form" method="POST/GET" action="index.php" target="_blank" enctype="编码方式">
+<form name="Form" method="POST/GET" action="url地址" target="_blank" enctype="编码方式">
     //各种表单标签
 </form>
 ```
@@ -242,7 +246,7 @@ required表示该文本框为必填项。
 ### 单选框
 
 ```html
-<input type="radio" name="组名" value="取值" />
+<input type="radio" name="组名" value="默认内容" checked="checked"/>
 ```
 
 checked表示默认选中
@@ -250,7 +254,7 @@ checked表示默认选中
 ### 复选框
 
 ```html
-<input type="checkbox" name="组名" value="取值" />
+<input type="checkbox" name="组名" value="默认内容" checked="checked"/>
 ```
 
 checked表示默认选中
@@ -258,24 +262,37 @@ checked表示默认选中
 ### 按钮
 
 ```html
-<input type="button" value="取值" />
+<input type="button" value="默认内容" />
 ```
 
 普通按钮一般情况下都是配合JavaScript来进行各种操作的；提交按钮一般都是用来给服务器提交数据的；重置按钮一般用来清除用户在表单中输入的内容。
 
+### label标签
+
+为input元素定义标注，用于绑定一个表单元素，当点击label标签内的文本时，浏览器会自动将焦点转到或者选择对应的表单元素上。
+
+```html
+<label for="male">男</label>
+<input type="radio" name="sex" id="male">
+```
+
 ### 多行文本框
 
 ```html
-<textarea rows="行数" cols="列数" value="取值">默认内容</textarea>
+<textarea rows="行数" cols="列数" value="默认内容">默认内容</textarea>
 ```
+
+
 
 ### 下拉列表
 
+至少包含一对option；在<option>中定义`selected="selected"`，为默认选中
+
 ```html
 <select>
-    <option>选项内容</option>
+    <option>选项内容1</option>
     ……
-    <option>选项内容</option>
+    <option>选项内容n</option>
 </select>
 ```
 
