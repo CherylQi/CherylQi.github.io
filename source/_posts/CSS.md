@@ -1,11 +1,11 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-04-03 09:20:34
+updated: 2021-07-30 21:21:51
 tags: 前端
 ---
 
-CSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观。
+CSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页外观，使**结构**和**样式**分离。
 
 ## CSS引入方式
 
