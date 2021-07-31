@@ -1,7 +1,7 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-07-30 21:21:51
+updated: 2021-07-31 21:55:34
 tags: 前端
 ---
 
@@ -9,11 +9,11 @@ CSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页�
 
 ## CSS引入方式
 
-（1）外部样式表。
+（1）外部样式表，`<link ref="stylesheet" href="/.css">`。
 
-（2）内部样式表。
+（2）内部样式表，在html内部任何位置，写在style标签里。
 
-（3）行内样式表。
+（3）行内样式表，修改简单样式，写在style属性内。
 
 还有一种@import方式，他是先加载HTML后加载CSS，而link先加载CSS后加载HTML。如果HTML在CSS之前加载，页面用户体验非常差。外部样式表多用于公有样式，内部样式表多用于私有样式，而行内样式更多用于小修改或者优先级方面。
 
@@ -35,7 +35,7 @@ CSS，全称为Cascading Style Sheet（层叠样式表），用于控制网页�
 
 ### em
 
-em是相对于“**当前元素**”的字体大小而言的。其中，1em等于“当前元素”字体大小。
+em是相对于“**当前元素**”的字体大小而言的。其中，1em等于“当前元素”字体大小，如果当前元素没有设置大小则按照父元素的1个文字大小。
 
 （1）首行缩进使用text-indent:2em实现
 
@@ -146,9 +146,13 @@ class属性可以为同一页面的相同元素或不同元素设置相同的cla
 
 定义字体大小**font-size**可以使用关键字[small, medium, large]，但很少使用。
 
-字体**font-family**从左到右自动降级。
+字体**font-family**从左到右自动降级，用逗号分隔。
 
-**font-weight**: bold;
+**font-weight**: bold;也可以用数字表示，也更常用。
+
+**font-style**: normal/italic(斜体)。
+
+复合属性：`font: font-style font-weight font-size/line-height font-family`； font-size和font-family必须保留。
 
 ## 文本样式
 
@@ -164,7 +168,7 @@ text-align与margin: 0 auto的区别：
 
 **vertical-align**属性用于定义<u>周围</u>文字、inline元素或inline-block元素的基线相对于<u>该元素</u>的基线的垂直对齐方式。如果想要在div中实现图片的垂直居中，我们可以先为div定义display:table-cell，也就是将块元素转化为table-cell元素（表格单元格），然后再使用vertical-align:middle就可以实现了。table-cell元素的vertical-align属性是针对自身而言。vertical-align定义的是内部子元素相对于自身的对齐方式。
 
-定义文本的修饰效果：**text-decoration**[none, underline, line--through, overline]，none表示去除划线效果；line-through表示中划线。
+定义文本的修饰效果：**text-decoration**[none, underline, line-through, overline]，none表示去除划线效果；line-through表示中划线。
 
 定义文本的大小写转换：**text-transform**[none, uppercase, lowercase, capitalize]
 
