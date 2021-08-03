@@ -1,7 +1,7 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-08-02 21:04:30
+updated: 2021-08-03 22:17:27
 tags: 前端
 ---
 
@@ -214,13 +214,15 @@ text-align与margin: 0 auto的区别：
 
 ## 背景样式
 
-定义背景图片：**background-image**[url(图片路径)]
+定义背景图片：**background-image**[url(图片路径)]，便于控制位置
 
 定义背景图片重复：**background-repeat**[repeat(default), repeat-x, repeat-y, no-repeat]
 
-定义背景图片位置：**background-position**[top left, top center, top right, center left, center center, center right, bottom left, bottom center, bottom right]
+定义背景图片位置：**background-position**[top left, top center, top right, center left, center center, center right, bottom left, bottom center, bottom right]，前后顺序无关；如果是精确单位，则第一个参数是x轴，第二个参数是y轴。
 
-可缩写为：`background:url("src/img.jpg" no-repeat 50px 50px);`
+背景图像固定: **background-attachment**[scroll, fixed]
+
+可缩写为：`background:color url("src/img.jpg") no-repeat 50px 50px fixed;`
 
 ## 超链接伪类
 
