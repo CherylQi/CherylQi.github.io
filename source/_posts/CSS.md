@@ -1,7 +1,7 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-08-03 22:17:27
+updated: 2021-08-06 20:48:41
 tags: 前端
 ---
 
@@ -174,7 +174,7 @@ text-align与margin: 0 auto的区别：
 
 （2）“margin:0 auto；”实现的是块元素的水平居中。（要指定块元素的宽度）
 
-（3）“text-align:center；”在父元素中定义，“margin:0 auto；”在当前元素中定义。
+（3）“text-align:center；”将行元素和行内块元素水平居中，在**父元素**中定义，“margin:0 auto；”将块元素水平居中，在当前元素中定义。
 
 **vertical-align**属性用于定义<u>周围</u>文字、inline元素或inline-block元素的基线相对于<u>该元素</u>的基线的垂直对齐方式。如果想要在div中实现图片的垂直居中，我们可以先为div定义display:table-cell，也就是将块元素转化为table-cell元素（表格单元格），然后再使用vertical-align:middle就可以实现了。table-cell元素的vertical-align属性是针对自身而言。vertical-align定义的是内部子元素相对于自身的对齐方式。
 
@@ -202,7 +202,7 @@ text-align与margin: 0 auto的区别：
 
 定义表格标题的位置：**caption-side**[top, bottom]
 
-定义是否去除单元格之间的空隙：**border-collapse**[separate, collapse]
+定义是否去除单元格之间的空隙：**border-collapse**[separate, collapse]，合并相邻的边框
 
 定义表格边框的边距：**border-spacing**[10px]
 
@@ -256,17 +256,33 @@ text-align与margin: 0 auto的区别：
 
 **内容区**有三个属性：width、height和overflow。使用width和height属性可以指定盒子内容区的高度和宽度。在这里注意一点，width和height这两个属性是针对内容区而言，并不包括padding部分。当内容信息太多而超出内容区所占范围时，可以使用overflow溢出属性来指定处理方法。
 
-**边框**，border属性，其中“border:0”需要占用内存。“border:none”不需要占用内存。
+**边框**，border属性，可以设置边框宽度（粗细），样式（虚实）以及边框颜色，其中“border:0”需要占用内存。“border:none”不需要占用内存。
 
-**外边距**，叠加的情况
+**内边距**会影响盒子本身的大小，但是如果盒子本身没有指定width/height属性，则此时padding不会撑开盒子大小。
+
+清除内外边距：`*{padding: 0; margin: 0}`
+
+**外边距**，
+
+设置**水平**居中：盒子必须指定宽度；盒子的左右外边距都设置为auto
+
+叠加的情况
 
 同级元素的外边距叠加
 
 ![同级元素的外边距叠加](https://tvax1.sinaimg.cn/large/005SZbikly1govz75o35fj30hr0art9j.jpg)
 
+解决：尽量只给一个盒子设置margin
+
 父子元素的外边距叠加
 
 ![父子元素的外边距叠加](https://tva4.sinaimg.cn/large/005SZbikly1govz7nfywtj30ha06sq3j.jpg)
+
+解决：
+
+1. 为父元素定义边框
+2. 为父元素定义内边距
+3. 为父元素添加overflow:hidden
 
 空元素的外边距叠加
 
