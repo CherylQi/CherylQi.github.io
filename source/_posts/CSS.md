@@ -1,7 +1,7 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-08-06 20:48:41
+updated: 2021-08-10 21:02:57
 tags: 前端
 ---
 
@@ -290,7 +290,9 @@ text-align与margin: 0 auto的区别：
 
 （1）水平外边距永远不会有叠加，水平外边距指的是margin-left和margin-right。
 
-（2）垂直外边距只会在以上三种情况下会叠加，垂直外边距指的是margin-top和margin-bottom。（3）外边距叠加之后的外边距高度等于发生叠加之前的两个外边距中的最大值。
+（2）垂直外边距只会在以上三种情况下会叠加，垂直外边距指的是margin-top和margin-bottom。
+
+（3）外边距叠加之后的外边距高度等于发生叠加之前的两个外边距中的最大值。
 
 （4）外边距叠加针对的是block以及inline-block元素，不包括inline元素。因为inline元素的margin-top和margin-bottom设置无效。
 
@@ -339,7 +341,7 @@ text-align与margin: 0 auto的区别：
 
 设置浮动属性后，块元素的宽度就不再延伸。
 
-**float：**当一个元素定义了“float:left”或“float:right”时，不管这个元素之前是inline、inline-block或者其他类型，都会变成inline-block类型，并且后面的元素会紧跟着填上空缺的位置。如果浮动元素的高度大于父元素的高度，或者父元素没有定义高度，此时浮动元素会脱离父元素。但如果父元素也是浮动时，则父元素会自适应的包含子元素。
+**float：**当一个元素定义了“float:left”或“float:right”时，不管这个元素之前是inline、inline-block或者其他类型，都会变成inline-block类型（可以设置宽度和高度，如果没有设置宽度和高度默认是内容大小），并且后面的元素会紧跟着填上空缺的位置。如果浮动元素的高度大于父元素的高度，或者父元素没有定义高度，此时浮动元素会脱离父元素。但如果父元素也是浮动时，则父元素会自适应的包含子元素。
 
 清除浮动：清除浮动元素脱离标准流带来的影响，清除浮动后父级元素会根据子盒子自动检测高度。
 
@@ -353,17 +355,19 @@ text-align与margin: 0 auto的区别：
 
 ## 定位布局
 
-固定定位：**postition**[fixed]，相对于浏览器而言，被固定的元素不会随着滚动条的拖动改变位置。
+定位模式+边偏移
 
-相对定位：**position**[relative]，指元素的位置相对于它的原始位置计算的，会将元素转换为块元素。
+固定定位：**postition**[fixed]，相对于浏览器可视窗口而言，不保留原位置，被固定的元素不会随着滚动条的拖动改变位置。
 
-绝对定位：**position**[absolute]，相对于父元素而言，定义在任意位置。
+相对定位：**position**[relative]，指元素的位置相对于它的**原始**位置计算的，原位置保留，同时会将元素转换为块元素。
 
-静态定位：**position**[static]
+绝对定位：**position**[absolute]，相对于父元素而言，定义在任意位置，脱离文档流，原位置不保留，如果没有父元素或父元素没有定位，则以浏览器为准定位。
 
-如果想实现子元素相对父元素定位，父元素`position:relative`，子元素`position:absolute`，绝对定位元素是相对于外层第一个设置了“position:relative；”“position:absolute；”或“position:fixed”的祖先元素来进行定位的。
+静态定位：**position**[static]，按照文档流特性摆放位置，没有边偏移。
 
-**z-index**属性只有在元素定义“position:relative”“position:absolute或者“position:fixed”时才会被激活。
+如果想实现子元素相对父元素定位，父元素`position:relative`，子元素`position:absolute`，绝对定位元素是相对于外层**第一个**设置了“position:relative；”“position:absolute；”或“position:fixed”的祖先元素来进行定位的。
+
+**z-index**属性只有在元素定义“position:relative”“position:absolute或者“position:fixed”时才会被激活，数字后面没有单位。
 
 **记**：尝试用浮动布局，定位布局可能会使元素脱离原来的位置，使得布局不可控。
 
