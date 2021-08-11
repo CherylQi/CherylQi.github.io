@@ -1,7 +1,7 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-08-10 21:02:57
+updated: 2021-08-11 22:09:02
 tags: 前端
 ---
 
@@ -251,8 +251,10 @@ text-align与margin: 0 auto的区别：
 “display:none”与“visibility:hidden”的区别：
 
 “display:none”的元素被隐藏之后，不占据原来的位置。
-
+ 
 “visibility:hidden”的元素被隐藏之后，依然占据原来的位置。
+
+“overflow: hidden”隐藏溢出的部分
 
 **内容区**有三个属性：width、height和overflow。使用width和height属性可以指定盒子内容区的高度和宽度。在这里注意一点，width和height这两个属性是针对内容区而言，并不包括padding部分。当内容信息太多而超出内容区所占范围时，可以使用overflow溢出属性来指定处理方法。
 
@@ -502,7 +504,7 @@ x表示圆角的水平半径，y表示圆角的垂直半径。
 
 ## 雪碧图
 
-（1）使用Photoshop或者其他工具将小背景图合并成为一张大背景图，其中每一张小背景图要精确调整。
+（1）使用Photoshop或者其他工具将小背景图合并成为一张大**背景图**，其中每一张小背景图要精确调整。
 
 （2）使用background-image属性引入大背景图，并且结合background-position属性定位取出相应的图标。
 
