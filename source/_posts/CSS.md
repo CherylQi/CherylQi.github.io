@@ -1,7 +1,7 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-08-11 22:09:02
+updated: 2021-08-12 21:34:43
 tags: 前端
 ---
 
@@ -176,7 +176,7 @@ text-align与margin: 0 auto的区别：
 
 （3）“text-align:center；”将行元素和行内块元素水平居中，在**父元素**中定义，“margin:0 auto；”将块元素水平居中，在当前元素中定义。
 
-**vertical-align**属性用于定义<u>周围</u>文字、inline元素或inline-block元素的基线相对于<u>该元素</u>的基线的垂直对齐方式。如果想要在div中实现图片的垂直居中，我们可以先为div定义display:table-cell，也就是将块元素转化为table-cell元素（表格单元格），然后再使用vertical-align:middle就可以实现了。table-cell元素的vertical-align属性是针对自身而言。vertical-align定义的是内部子元素相对于自身的对齐方式。
+**vertical-align**属性用于定义<u>周围</u>文字、**inline**元素或**inline-block**元素的基线相对于<u>该元素</u>的基线的垂直对齐方式。如果想要在div中实现图片的垂直居中，我们可以先为div定义display:table-cell，也就是将块元素转化为table-cell元素（表格单元格），然后再使用vertical-align:middle就可以实现了。table-cell元素的vertical-align属性是针对自身而言。vertical-align定义的是内部子元素相对于自身的对齐方式。
 
 定义文本的修饰效果：**text-decoration**[none, underline, line-through, overline]，none表示去除划线效果；line-through表示中划线。
 
@@ -424,9 +424,13 @@ text-align与margin: 0 auto的区别：
 
 ```css
 #triangle{
+    /* 关键在边框的宽度 */
     border-width: 10px;
     border-style: solid;
     border-color: red transparent transparent transparent;
+    /* 浏览器兼容 */
+    line-height: 0;
+    font-size: 0;
 }
 ```
 
