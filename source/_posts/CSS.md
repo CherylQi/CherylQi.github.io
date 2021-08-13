@@ -1,7 +1,7 @@
 ---
 title: CSS
 date: 2021-02-05 18:21:34
-updated: 2021-08-12 21:34:43
+updated: 2021-08-13 21:20:39
 tags: 前端
 ---
 
@@ -603,6 +603,14 @@ x表示圆角的水平半径，y表示圆角的垂直半径。
 （5）BFC就是页面上的一个隔离的盒子，该盒子内部的子元素不会影响到外面的元素。
 
 （6）计算一个BFC的高度时，其内部浮动元素的高度也会参与计算。
+
+## HTML5新增
+
+IE9+以上版本的浏览器才支持，针对搜索引擎进行语义化
+
+1. 结构元素：article(内容标签)、aside(侧边栏标签)、header(头部标签)、footer(尾部标签)、section(定义文档某个区域)、nav(导航标签)
+2. 其他元素：video(视频)、audio(音频)、canvas、embed、mark、progress、meter、time、command、details、datagrid、keygen、output、source、menu、ruby、wbr、bdi、dialog、
+
 
 ## CSS3新增
 
